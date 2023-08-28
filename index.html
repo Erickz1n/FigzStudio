@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="style-form.css">
+
+
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <div id="app-form">
+
+        <header id="header">
+            <nav class="container">
+                <img class="logo" src="./assets/images/logo-black.svg" alt="">
+                <!-- menu -->
+                <div class="menu">
+                    <ul class="grid">
+                        <li><a href="" class="option" href="#">HOME</a></li>
+                        <li><a href="" class="option" href="#">PORTFÓLIO</a></li>
+                        <li><a href="" class="option" href="#">CONTATO</a></li>
+                        <button class="language-button"><img src="./assets/images/icon-world.svg" alt=""> PORTUGUÊS <img src="./assets/images/language-arrow.svg" alt=""></button>
+                    </ul>
+                </div>
+                <div class="toggle icon-menu"></div>
+                <div class="toggle icon-close"></div>
+            </nav>
+        </header>
+
+        <main>
+
+
+            <section id="form" class="section">
+                <div class="container grid">
+                    <div class="texts">
+                        <h1 class="title">Contato.</h1>
+                        <p class="text">Sua história fará parte da nossa.</p>
+                    </div>
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                        <div class="quest">
+                            <label class="text">Nome <p class="subtext">(Obrigatório)</p></label>
+                            <input class="input" type="text" name="name" placeholder="Nome Completo." autocomplete="off">
+                        </div>
+
+                        <div class="quest">
+                            <label class="text">Empresa <p class="subtext">(Obrigatório)</p></label>
+                            <input class="input" type="text" name="project" placeholder="Nome do Projeto." autocomplete="off">
+                        </div>
+
+                        <div class="quest">
+
+                            <label class="text">Email <p class="subtext"> (Obrigatório)</p></label>
+                            <input class="input" type="email" name="email" placeholder="@" autocomplete="off">
+                        </div>
+
+                        <div class="quest">
+
+                            <label class="text">Mensagem <p class="subtext">(Obrigatório)</p></label>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Conte-me um pouco sobre o projeto."></textarea>
+                        </div>
+                        <button class="button" id="button" type="submit">Enviar. <img src="./assets/images/submit-arrow.svg" alt=""></button>
+            
+                        <input type="hidden" name="accessKey" value="1e2f245e-0069-40df-b16e-40177ff691d7">
+                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/thanks.html">
+                </div>
+                </form>
+        
+            </section>
+        </main>
+
+    
+        <footer id="footer" class="section">
+            <div class="footer">
+                <p class="text">Aguardo seu contato!</p>
+                <p class="text">Solicite um orçamento <br> via email: @figzstudio.com</p>
+            </div>
+            <li class="footer">
+                <a class="link" href="">Behance</a>
+                <a class="link" href="">Instagram</a>
+            </li>
+        </footer>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+</html>
