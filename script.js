@@ -76,16 +76,28 @@ scrollReveal.reveal(
         const checkpointEnd = checkpoint <= sectionTop + sectionHeight
 
         if(checkpointStart && checkpointEnd) {
-            document
-            .querySelector('nav ul li a[href*=' + sectionId + ']')
-            .classList.add('active')
+            document.querySelector('nav ul li a[href*=' + sectionId + ']').classList.add('active')
         } else {
             document
-            .querySelector('nav ul li a[href*=' + sectionId + ']')
-            .classList.remove('active')
+            .querySelector('nav ul li a[href*=' + sectionId + ']').classList.remove('active')
         }
     }
 }
+
+// CLIQUE NO SANDUICHE PARA ELE SUMIR
+
+
+// ABRE FECHA O MENU
+
+const nav = document.querySelector('#header nav')
+const toggle = document.querySelectorAll('nav .toggle')
+
+for(const element of toggle) {
+    element.addEventListener('click', function() {
+        nav.classList.toggle('show')
+    })
+}
+
 
 // QUANDO CLICAR EM UM ITEM DO MENU, ESCONDER O MENU
 
@@ -97,8 +109,11 @@ for (const link of links) {
     })
 }
 
+
+
     
     window.addEventListener('scroll', function () {
         backToTop()
         changeHeaderWhenScroll()
+        activateMenuAtCurrentSection()
     })
