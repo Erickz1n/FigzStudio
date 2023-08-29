@@ -70,11 +70,17 @@ body, #app-form, textarea, .input, .label, .button, .container{
     font-family: gilroy, sans-serif;
 }
 
+#header.scroll {
+    transition: .2s;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.152);
+}
+
 #header {
     background-color: var(--surface-color);
     backdrop-filter: blur(0.4rem);
     -webkit-backdrop-filter: blur(2.4rem);
     position: fixed;
+    z-index: 10;
     width: 100%;
 }
 
@@ -253,6 +259,38 @@ textarea {
     display: flex;
     gap: 1.4rem;
 }
+
+/* BACK-TO-TOP */
+
+.back-to-top {
+    background-color: var(--base-color);
+    color: #ffffff;
+    text-decoration: none;
+
+    position: fixed; 
+    right: 1rem;
+    bottom: 1rem;
+
+    padding: 0.5rem;
+    clip-path: circle();
+
+    font-size: 3rem;
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /* FOOTER */
 
