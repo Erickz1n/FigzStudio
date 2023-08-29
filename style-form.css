@@ -465,6 +465,11 @@ textarea {
 
     /* FORMULARIO */
 
+    #form {
+        padding: 5rem 0 10rem 0;
+
+    }
+
     #form .container{
         margin-top: 10rem;
         display: flex;
