@@ -248,6 +248,7 @@ textarea {
     font-size: 2.3rem;
     padding: 1.9rem 4.8rem;
     width: 18.8rem;
+    border: none;
 
     display: flex;
     gap: 1.4rem;
@@ -256,27 +257,36 @@ textarea {
 /* FOOTER */
 
 #footer{
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     gap: 4rem;
 
     width: 100%;
     background-color: #000;
     color: #fff;
-    font-size: 2rem;
+    font-size: clamp(2rem, 1vw, 3rem);
 }
 
-#footer .footer {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    /* display: flex;
+#footer .footer, .footer-text {
+    margin: 0 2rem;
+
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    /* align-items: center; */
 }
 
-#footer .footer li .link {
+#footer  ul .footer a {
+    display: flex;
+    color: #fff;
+    right: 0;
+    bottom: 0;
+    /* align-items: none;
+    display: flex;
+    flex-direction: column; */
     list-style: none;
+    text-decoration: none;
 }
