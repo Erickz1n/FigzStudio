@@ -21,7 +21,7 @@
     font-family: gilroy, sans-serif;
     
     --base-color: #000;
-    --surface-color: hsla(0, 0%, 100%, 0.032);
+    --surface-color: hsla(0, 0%, 100%, 0.007);
     --surface-color-menu-active: hsla(0, 0%, 13%, 0.204);
     --header-height: 5rem;
 }
@@ -74,7 +74,7 @@ body, #app-form, textarea, .input, .label, .button, .container{
     left: 0;
 
     background-color: var(--surface-color);
-    backdrop-filter: blur(0.4rem);
+    backdrop-filter: blur(0.2rem);
     -webkit-backdrop-filter: blur(2.4rem);
 }
 
