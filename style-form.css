@@ -74,7 +74,7 @@ body, #app-form, textarea, .input, .label, .button, .container{
     left: 0;
 
     background-color: var(--surface-color);
-    backdrop-filter: blur(0.2rem);
+    backdrop-filter: blur(0.6rem);
     -webkit-backdrop-filter: blur(2.4rem);
 }
 
