@@ -319,6 +319,7 @@ textarea {
 
     display: flex;
     justify-content: space-between;
+
     cursor: pointer;
     font-family: gilroy-bold, sans-serif;
 }
