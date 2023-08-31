@@ -41,34 +41,84 @@
                         <h1 class="title">Contato.</h1>
                         <p class="text">Sua história fará parte da nossa.</p>
                     </div>
-                    <form action="https://api.staticforms.xyz/submit" method="post">
+                    <form id="formulario" action="https://formsubmit.co/ajax/contato@figzstudio.com" method="post" data-form>
                         <div class="quest">
                             <label class="text">Nome <p class="subtext">(Obrigatório)</p></label>
-                            <input class="input" type="text" name="name" placeholder="Nome Completo." autocomplete="off">
+                            <input class="input" type="text" name="Nome" placeholder="Nome Completo." autocomplete="off">
                         </div>
 
                         <div class="quest">
                             <label class="text">Empresa <p class="subtext">(Obrigatório)</p></label>
-                            <input class="input" type="text" name="project" placeholder="Nome do Projeto." autocomplete="off">
+                            <input class="input" type="text" name="Projeto" id="enterprise" placeholder="Nome do Projeto." autocomplete="off">
+                        </div>
+
+                        
+                        <div class="quest">
+                            
+                            <label class="text">Email <p class="subtext"> (Obrigatório)</p></label>
+                            <input class="input" type="email" name="Email" placeholder="@" autocomplete="off">
                         </div>
 
                         <div class="quest">
-
-                            <label class="text">Email <p class="subtext"> (Obrigatório)</p></label>
-                            <input class="input" type="email" name="email" placeholder="@" autocomplete="off">
+                            
+                            <label class="text" for="telefone">Whatsapp <p class="subtext"> (Obrigatório)</p></label>
+                            <input class="input" type="tel" id="telefone" name="Whatsapp" placeholder="(XX) XXXXX-XXXX" maxlength="15"  autocomplete="off" oninput="formatPhoneNumber()">
                         </div>
+                        
+                        <div class="quest">
+
+                            <label class="text" for="opcoes">Nº de colaboradores <p class="subtext">(Obrigatório)</p></label>
+                            <select class="input" id="opcoes" name="Colaboradores">
+                                <option class="option" value="1-10">1-10 colaboradores</option>
+                                <option class="option" value="11-50">11-50 colaboradores</option>
+                                <option class="option" value="51-100">51-100 colaboradores</option>
+                                <option class="option" value="100+">100 ou mais colaboradores</option>
+                            </select>
+
+                        </div>
+                        
+                        <div class="quest">
+                            <label class="text">Qual o seu faturamento mensal?
+                            <p class="subtext">(Obrigatório)</p></label>
+                            <input class="input" type="number" name="Faturamento da empresa" placeholder="Digite um número aproximado" autocomplete="off">
+                            </div>
+                            
+                            <div class="quest">
+
+                                <label class="text" for="opcoes">O valor que você espera investir está entre R$3.000,00 & R$15.000,00? <p class="subtext">(Obrigatório)</p></label>
+                                <select class="input" id="opcoes" name="Investimento">
+                                    <option class="option" value="Sim">Sim</option>
+                                    <option class="option" value="Não">Não</option>
+                                </select>
+                                
+                            </div>
+
+
+
+                            <div class="quest">
+                            
+                            <label class="text">Onde nos encontrou? <p class="subtext"> (Obrigatório)</p></label>
+                            <input class="input" type="text" name="Onde nos encontrou" placeholder="Ex: redes sociais" autocomplete="off">
+                            </div>
+
+                            <div class="quest">
+                            
+                            <label class="text">Quais são seus concorrentes? <p class="subtext"> (Obrigatório)</p></label>
+                            <input class="input" type="text" name="Empresa(s)" placeholder="Nome da(s) empresa(s)" autocomplete="off">
+                            </div>
 
                         <div class="quest">
 
                             <label class="text">Mensagem <p class="subtext">(Obrigatório)</p></label>
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="Conte-me um pouco sobre o projeto."></textarea>
+                            <textarea name="Mensagem" id="" cols="30" rows="10" placeholder="Conte-me um pouco sobre o projeto."></textarea>
                         </div>
+
                         <div class="content-button">
-                            <button class="button" id="button" type="submit">Enviar.<img src="./assets/images/submit-arrow.svg" alt=""></button>
+                            <button class="button" id="button" type="submit" data-button>Enviar.<img src="./assets/images/submit-arrow.svg" alt=""></button>
                         </div>
+
+                        
             
-                        <input type="hidden" name="accessKey" value="1e2f245e-0069-40df-b16e-40177ff691d7">
-                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/thanks.html">
                 </div>
                 </form>
         
