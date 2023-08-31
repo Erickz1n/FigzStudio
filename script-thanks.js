@@ -8,7 +8,7 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-    `header, #thanks h1, #thanks .button, #form button, #footer .text, #footer .link`,
+    `header, #thanks h1, #form button, #footer .text, #footer .link`,
     { interval: 100}
     )
 

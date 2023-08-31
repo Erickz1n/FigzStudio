@@ -273,7 +273,9 @@ nav.show div.icon-close {
     font-size: 2rem;
     text-decoration: none;
     padding: 2rem;
-    transition: all 2s;
+    transition: all .2s;
+    animation: top-to-down .5s .5s forwards;
+    opacity: 0;
 }
 
 #thanks .button:hover {
@@ -281,6 +283,21 @@ nav.show div.icon-close {
     background: #000;
 }
 
+@keyframes top-to-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 /* BACK-TO-TOP */
 

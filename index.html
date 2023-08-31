@@ -68,7 +68,8 @@
                         <div class="quest">
 
                             <label class="text" for="opcoes">Nº de colaboradores <p class="subtext">(Obrigatório)</p></label>
-                            <select class="input" id="opcoes" name="Colaboradores">
+                            <select class="input" id="opcoes" name="Colaboradores" placeholder="Selecione uma opção">
+                                <option value="" disabled selected hidden>Escolha uma opção</option>
                                 <option class="option" value="1-10">1-10 colaboradores</option>
                                 <option class="option" value="11-50">11-50 colaboradores</option>
                                 <option class="option" value="51-100">51-100 colaboradores</option>
@@ -87,6 +88,7 @@
 
                                 <label class="text" for="opcoes">O valor que você espera investir está entre R$3.000,00 & R$15.000,00? <p class="subtext">(Obrigatório)</p></label>
                                 <select class="input" id="opcoes" name="Investimento">
+                                    <option value="" disabled selected hidden>Escolha uma opção</option>
                                     <option class="option" value="Sim">Sim</option>
                                     <option class="option" value="Não">Não</option>
                                 </select>
