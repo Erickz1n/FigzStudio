@@ -336,13 +336,14 @@ textarea {
 
     padding: 3rem;
 
-    width: 100%;
+    width: auto;
     height: 6.2rem;
     
     border: none;
 
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    /* justify-content: space-between; */
 
     cursor: pointer;
     font-family: gilroy-bold, sans-serif;
