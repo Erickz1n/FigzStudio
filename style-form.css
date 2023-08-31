@@ -390,7 +390,7 @@ textarea {
     visibility: hidden;
     opacity: 0;
 
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     transform: translateY(100%);
 }
 
@@ -399,6 +399,11 @@ textarea {
     opacity: 1;
     transform: translateY(0);
 }
+
+.back-to-top:hover {
+    transform: scale(1.2);
+}
+
 
 /* FOOTER */
 

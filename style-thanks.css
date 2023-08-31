@@ -273,7 +273,7 @@ nav.show div.icon-close {
     font-size: 2rem;
     text-decoration: none;
     padding: 2rem;
-    transition: all .2s;
+    transition: all .3s;
     animation: top-to-down .5s .5s forwards;
     opacity: 0;
 }
@@ -328,6 +328,10 @@ nav.show div.icon-close {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: scale(1.5);
 }
 
 /* FOOTER */
@@ -466,7 +470,7 @@ nav.show div.icon-close {
         font-size: 3rem;
         text-decoration: none;
         padding: 3rem;
-        transition: all 2s;
+        transition: all .3s;
     }
     
     #thanks .button:hover {

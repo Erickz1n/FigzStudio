@@ -183,7 +183,7 @@ class FormSubmit {
             // Adicionar um atraso de 2 segundos (2000 milissegundos) antes do redirecionamento
             setTimeout(() => {
                 window.location.href = "thanks.html";
-            }, 1000); // Tempo em milissegundos (2 segundos)
+            }, 0); // Tempo em milissegundos (2 segundos)
 
         } catch (error) {
             this.displayError();
