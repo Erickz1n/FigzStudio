@@ -139,7 +139,7 @@ header nav ul li .nav{
 header .logo {
     width: 20rem;
     transition: all 1s;
-    margin-right: 8rem;
+    margin-right: 2rem;
 }
 
 nav ul li {
@@ -513,7 +513,6 @@ textarea {
 
     animation: topdown 2s;
     transition: all .5s;
-
 }
 
 #switch button {
