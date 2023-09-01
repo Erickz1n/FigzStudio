@@ -506,13 +506,13 @@ textarea {
     flex-direction: column;
     align-items: center;
     /* width: 6.4rem; */
-    background:  var(--switch-bg-url) no-repeat center;
+    /* background:  var(--switch-bg-url) no-repeat center; */
 
     /* margin: 0.4rem auto; */
     border-radius: 50%;
 
-    animation: topdown 2s;
-    transition: all .5s;
+    /* animation: topdown 2s; */
+    /* transition: all .5s; */
 }
 
 #switch button {
@@ -523,16 +523,16 @@ textarea {
     padding: 2rem;
 
     top: 50%;
-    right: 0;
-    z-index: 1;
+    /* right: 0; */
+    /* z-index: 1; */
     transition: outline 0.2s, background 0.5s;
 
     animation: slide-back 0.2s;
 }
 
-.dark #switch button {
+/* .dark #switch button {
     animation: slide-in 0.2s forwards;
-}
+} */
 
 #switch button:hover {
     outline: 0.8rem solid var(--highlight-color);
