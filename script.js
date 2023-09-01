@@ -8,7 +8,7 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-    `#form .title, #form .text, #form input, #form select, #form textarea, #form button, #footer .text, #footer .link`,
+    `#header, #form .title, #form .text, #form .subtext, #form input, #form select, #form textarea, #form button, #footer .text, #footer .link`,
     { interval: 100}
     )
 
@@ -239,7 +239,48 @@ languageSelect.addEventListener("change", () => {
     function toggleMode() {
         const html = document.documentElement
         html.classList.toggle('dark')
+
+            //pegar a tag img
+        const img = document.querySelector("#header img")
+        const worldIcon = document.querySelector(".language-selector img")
+        const arrowSubmit = document.querySelector("#button img")
+        //substituir a imagem
+
+        if(html.classList.contains('dark')) {
+            //se tiver light mode, adicionar a imagem light
+            img.setAttribute('src', './assets/images/logo-white.svg')
+            img.setAttribute('alt', 'Logo Figz Studio branca')
+
+            worldIcon.setAttribute('src', './assets/images/icon-world-white.svg')
+            worldIcon.setAttribute('alt', 'icone de mundo')
+
+            arrowSubmit.setAttribute('src', './assets/images/submit-arrow-black.svg')
+            arrowSubmit.setAttribute('alt', 'ícone de flecha na diagonal preta simbolizando envio')
+            
+
+        } else {
+            //se tiver sem light mode, manter a imagem normal
+            img.setAttribute('src', './assets/images/logo-black.svg')
+            img.setAttribute('alt', 'Logo Figz Studio preta')
+
+            worldIcon.setAttribute('src', './assets/images/icon-world.svg')
+            worldIcon.setAttribute('alt', 'icone de mundo')
+
+            arrowSubmit.setAttribute('src', './assets/images/submit-arrow.svg')
+            arrowSubmit.setAttribute('alt', 'ícone de flecha na diagonal branca simbolizando envio')
+
+
+        }
     }
+
+    // INPUT FATURAMENTO PARA PERMITIR APENAS NUMEROS
+
+
+
+
+
+
+
 
     window.addEventListener('scroll', function () {
         backToTop()
