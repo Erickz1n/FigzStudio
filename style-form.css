@@ -38,6 +38,7 @@
 
 html {
     scroll-behavior: smooth;
+    transition: all .3s;
 }
 
 .container {
@@ -584,6 +585,95 @@ textarea {
 
     .success {
         color: greenyellow;
+    }
+
+    /* TROCA DE IDIOMA */
+
+    .language-selector {
+        position: relative;
+        display: inline-block;
+        align-items: center;
+        width: auto;
+
+    }
+
+    #language-select {
+        padding: .5rem;
+        font-size: 1.5rem;
+        background-color: none;
+        color: #000;
+        border: none;
+        width: auto;
+        cursor: pointer;
+        font-family: gilroy, sans-serif;
+    }
+    
+    #language-select:focus {
+        outline: none;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    .fade-out {
+        opacity: 0;
+    }
+    
+
+    /* switch */
+    #switch {
+        position: relative;
+        width: 6.4rem;
+    
+        margin: 0.4rem auto;
+    
+        animation: topdown 2s;
+    }
+    
+    #switch button {
+        width: 3.2rem;
+        height: 3.2rem;
+        background: #000 no-repeat center;
+        border: 0;
+        /* border-radius: 50%; */
+    
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        transform: translateY(-50%);
+        transition: outline 0.2s, background 0.5s;
+    
+        animation: slide-back 0.2s;
+    }
+    
+    .dark #switch button {
+        animation: slide-in 0.2s forwards;
+    }
+    
+    #switch button:hover {
+        outline: 0.8rem solid var(--highlight-color);
+    }
+    
+    #switch span {
+        display: none;
+        /* width: 6.4rem; */
+        /* height: 2.4rem; */
+    
+        background: var(--surface-color);
+        border: 1rem solid #000;
+        backdrop-filter: blur(0.4rem);
+        -webkit-backdrop-filter: blur(0.4rem);
+        border-radius: 9999px;
+    }
+    
+
+    .dark {
+        color: #ffffff;
+        background-color: #000;
+        transition: all .4s;
     }
 }
 

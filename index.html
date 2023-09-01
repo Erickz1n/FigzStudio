@@ -24,7 +24,22 @@
                         <li><a href="main.html" class="nav">HOME</a></li>
                         <li><a href="" class="nav">PORTFÓLIO</a></li>
                         <li><a href="" class="nav">CONTATO</a></li>
-                        <button class="language-button nav"><img src="./assets/images/icon-world.svg" class="world-icon" alt=""> PORTUGUÊS <img src="./assets/images/language-arrow.svg" class="arrow" alt=""></button>
+                        <div id="switch" onclick="toggleMode()" >
+                            <button>
+                            </button>
+                            <span></span>
+                        </div>
+                        <div class="language-selector">
+                            <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
+                            <select id="language-select">
+                                <option value="" disabled selected hidden>  IDIOMA </option>
+                                <option class="option" value="pt">PORTUGUÊS</option>
+                                <option class="option" value="en">INGLÊS</option>
+                                <option class="option" value="es">ESPANHOL</option>
+                                <!-- Adicione mais idiomas aqui -->
+                            </select>
+
+                        </div>
                     </ul>
                 </div>
                 <div class="toggle icon-menu"></div>
@@ -38,7 +53,7 @@
             <section id="form" class="section">
                 <div class="container grid">
                     <div class="texts">
-                        <h1 class="title">Contato.</h1>
+                        <h1 class="title" id="greeting">Contato.</h1>
                         <p class="text">Sua história fará parte da nossa.</p>
                     </div>
                     <form id="formulario" action="https://formsubmit.co/ajax/contato@figzstudio.com" method="post" data-form>
@@ -142,6 +157,8 @@
                 </li>
             </ul>
         </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
         
         <a href="#form" class="back-to-top"><i class="icon-arrow-up"></i></a>

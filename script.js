@@ -207,9 +207,40 @@ const formSubmit = new FormSubmit({
 formSubmit.init();
 
 
+// MUDANÇA DE IDIOMA -------------------------------------------------------------
+const languageSelect = document.getElementById("language-select");
+const greeting = document.getElementById("greeting");
 
-    
-    
+languageSelect.addEventListener("change", () => {
+    const selectedLang = languageSelect.value;
+    // Simule troca de idioma com fade
+    greeting.style.opacity = 0;
+    setTimeout(() => {
+        switch (selectedLang) {
+            case "pt":
+                greeting.textContent = "Contato.";
+                break;
+            case "en":
+                greeting.textContent = "Contact.";
+                break;
+            case "es":
+                greeting.textContent = "Contacto.";
+                break;
+            // Adicione mais casos para outros idiomas
+        }
+        setTimeout(() => {
+            greeting.style.opacity = 1;
+        }, 300); // Tempo da animação
+    }, 300); // Tempo da animação
+});
+
+    // SWITCH 
+
+    function toggleMode() {
+        const html = document.documentElement
+        html.classList.toggle('dark')
+    }
+
     window.addEventListener('scroll', function () {
         backToTop()
         changeHeaderWhenScroll()
