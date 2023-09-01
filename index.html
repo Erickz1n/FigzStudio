@@ -17,8 +17,16 @@
 
         <header id="header">
             <nav class="container">
-                <img class="logo" src="./assets/images/logo-black.svg" alt="">
-                <!-- menu -->
+                <!-- <div class="header-content"> -->
+
+                    <img class="logo" src="./assets/images/logo-black.svg" alt="">
+                    <!-- menu -->
+                    <div id="switch" onclick="toggleMode()" >
+                        <button>
+                        </button>
+        
+                    </div>
+                <!-- </div> -->
                 <div class="menu">
                     <ul class="grid">
                         <li><a href="main.html" class="nav">HOME</a></li>
@@ -28,7 +36,7 @@
                         <div class="language-selector">
                             <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
                             <select id="language-select">
-                                <option value="" disabled selected hidden>  IDIOMA </option>
+                                <option class="option" value="" disabled selected hidden>  IDIOMA </option>
                                 <option class="option" value="pt">PORTUGUÊS</option>
                                 <option class="option" value="en">INGLÊS</option>
                                 <option class="option" value="es">ESPANHOL</option>
@@ -37,18 +45,17 @@
 
                         </div>
 
-                        <div id="switch" onclick="toggleMode()" >
-                            <button>
-                            </button>
 
-                        </div>
                     </ul>
+
                 </div>
                 <div class="toggle icon-menu"></div>
                 <div class="toggle icon-close"></div>
             </nav>
+
         </header>
 
+        
         <main>
 
 
@@ -59,6 +66,8 @@
                         <p class="text">Sua história fará parte da nossa.</p>
                     </div>
                     <form id="formulario" action="https://formsubmit.co/ajax/contato@figzstudio.com" method="post" data-form>
+
+                        
                         <div class="quest">
                             <div class="quest-content">
                                 <label class="text">Nome </label>

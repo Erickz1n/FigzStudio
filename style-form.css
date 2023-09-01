@@ -24,7 +24,6 @@
     color: greenyellow;
 }
 
-
 :root {
     font-size: 62.5%;
 
@@ -37,6 +36,7 @@
     --header-height: 5rem;
     --input-bg: hsl(0, 0%, 85%);
     --input-placeholder-color: hsl(0, 0%, 24%); 
+    --switch-bg-url: url(./assets/images/moon-icon-black.svg);
 }
 
 .dark {
@@ -44,15 +44,14 @@
     --background-color: #000000;
     --input-bg: #3e3e3e;
     --input-placeholder-color: hsl(0, 0%, 100%); 
+    --switch-bg-url: url(./assets/images/sun-icon-white.svg);
     
     transition: all .3s;
-
 }
 
 html {
     scroll-behavior: smooth;
     transition: all .3s;
-
 }
 
 #app-form {
@@ -66,7 +65,6 @@ html {
     margin-left: 2rem;
     margin-right: 2rem;
 }
-
 
 /* ANOTAÇÕES 
 
@@ -100,7 +98,7 @@ body, #app-form, textarea, .input, .label, .button, .container{
     align-items: center;
 
     width: 100%;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -126,6 +124,11 @@ body, #app-form, textarea, .input, .label, .button, .container{
     align-items: center;
 }
 
+.header-content {
+    display: flex;
+    gap: 40rem;
+}
+
 header nav ul li .nav{
     font-size: 2rem;
     width: 100%;
@@ -136,7 +139,7 @@ header nav ul li .nav{
 header .logo {
     width: 20rem;
     transition: all 1s;
-
+    margin-right: 8rem;
 }
 
 nav ul li {
@@ -151,7 +154,6 @@ nav ul li a {
     position: relative;
     text-decoration: none;
     justify-content: center;
-    
 }
 
 nav ul li a:hover, 
@@ -177,7 +179,6 @@ nav .menu {
     visibility: hidden;
     top: -20rem;
     transition: all 0.3s;
-    
 }
 
 nav ul li a:hover::after,
@@ -187,12 +188,10 @@ width: 100%;
 
 nav .menu ul {
     display: none;
-
 }
 
 /* Mostrar menu */
 nav.show .menu {
-    
     display: flex;
     opacity: 1;
     visibility: visible;
@@ -207,7 +206,6 @@ nav.show .menu {
 
     display: grid;
     place-content: center;
-    
 }
 
 nav.show .menu ul {
@@ -229,11 +227,11 @@ nav .icon-close {
     opacity: 0;
 
     position: absolute;
-    top: -2.5rem;
+    top: -10rem;
     right: 4rem;
+    bottom: 1rem;
 
     transition: all .3s;
-
 }
 
 .icon-menu, .icon-close {
@@ -255,7 +253,6 @@ nav.show div.icon-close {
     justify-content: center;
     align-items: center;
     width: auto;
-
 }
 
 #language-select {
@@ -268,7 +265,6 @@ nav.show div.icon-close {
     cursor: pointer;
     font-family: gilroy, sans-serif;
     transition: all .3s;
-
 }
 
 #language-select:focus {
@@ -327,6 +323,15 @@ nav.show div.icon-close {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.input .option {
+    padding: 2rem;
+    width: 2rem;
+}
+
+.menu {
+    display: flex;
 }
 
 #form form {
@@ -434,12 +439,10 @@ select {
 textarea {
     height: 17rem;
     resize: vertical;
-
 }
 
 #form .content-button {
     max-width: 15rem;
-
 }
 
 #form button {
@@ -462,7 +465,6 @@ textarea {
     cursor: pointer;
     font-family: gilroy-bold, sans-serif;
     transition: all .3s;
-
 }
 
 #form button:disabled {
@@ -480,7 +482,6 @@ textarea {
     display: inline-block;
     align-items: center;
     width: auto;
-
 }
 
 #language-select {
@@ -500,25 +501,35 @@ textarea {
 
 /* SWITCH */
 #switch {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* width: 6.4rem; */
+    background:  var(--switch-bg-url) no-repeat center;
+
+    /* margin: 0.4rem auto; */
+    border-radius: 50%;
+
+    animation: topdown 2s;
+    transition: all .5s;
+
 }
 
 #switch button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 3.2rem;
     height: 3.2rem;
-    background: var(--base-color) no-repeat center;
+    background:  var(--switch-bg-url) no-repeat center;
     border: 0;
+    padding: 2rem;
 
-    left: 0;
-
+    top: 50%;
+    right: 0;
+    z-index: 1;
     transition: outline 0.2s, background 0.5s;
-}
 
+    animation: slide-back 0.2s;
+}
 
 .dark #switch button {
     animation: slide-in 0.2s forwards;
@@ -530,14 +541,13 @@ textarea {
 
 #switch span {
     display: none;
-    /* width: 6.4rem; */
-    /* height: 2.4rem; */
+    margin: 0;
+
 
     background: var(--surface-color);
     border: 1rem solid var(--base-color);
     backdrop-filter: blur(0.4rem);
     -webkit-backdrop-filter: blur(0.4rem);
-    /* border-radius: 9999px; */
 }
 
 
@@ -583,7 +593,6 @@ textarea {
     transform: scale(1.2);
 }
 
-
 /* FOOTER */
 
 #footer{
@@ -600,7 +609,6 @@ textarea {
 
     background-color: var(--base-color);
     transition: all .3s;
-
 }
 
 #footer .footer, .footer-text {
@@ -610,14 +618,11 @@ textarea {
     flex-direction: column;
     justify-content: center;
     transition: all .3s;
-
-
 }
 
 #footer  ul .footer a {
     display: flex;
     color: var(--background-color);
-
 
     right: 0;
     bottom: 0;
@@ -668,6 +673,12 @@ textarea {
         display: none;
     }
 
+    header .logo {
+        width: 20rem;
+        transition: all 1s;
+        margin-right: 33rem;
+        margin-left: 1rem;
+    }
 
     #header {
         height: 8rem;
@@ -829,16 +840,19 @@ textarea {
         flex-direction: column;
         align-items: center;
         /* width: 6.4rem; */
+        background:   var(--switch-bg-url) no-repeat center;
     
         /* margin: 0.4rem auto; */
+        border-radius: 50%;
     
         animation: topdown 2s;
+        transition: all .5s;
     }
     
     #switch button {
         width: 3.2rem;
         height: 3.2rem;
-        background: var(--base-color) no-repeat center;
+        /* background:   var(--switch-bg-url) no-repeat center; */
         border: 0;
     
         top: 50%;
