@@ -441,9 +441,7 @@ textarea {
     resize: vertical;
 }
 
-#form .content-button {
-    max-width: 15rem;
-}
+
 
 #form button {
     background-color: var(--base-color);
@@ -530,9 +528,7 @@ textarea {
     animation: slide-back 0.2s;
 }
 
-/* .dark #switch button {
-    animation: slide-in 0.2s forwards;
-} */
+/*   */
 
 #switch button:hover {
     outline: 0.8rem solid var(--highlight-color);
@@ -771,7 +767,7 @@ textarea {
     #footer {
         display: flex;
         flex-direction: row;
-        gap: 55rem;
+        gap: 48rem;
         align-items: center;
     }
 
@@ -879,8 +875,9 @@ textarea {
         border: 1rem solid var(--base-color);
         backdrop-filter: blur(0.4rem);
         -webkit-backdrop-filter: blur(0.4rem);
+
+
     }
+
     
-
-
 }

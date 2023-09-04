@@ -19,7 +19,7 @@
             <nav class="container">
                 <!-- <div class="header-content"> -->
 
-                    <img class="logo" src="./assets/images/logo-black.svg" alt="">
+                    <img class="logo" id="logo" src="./assets/images/logo-black.svg" alt="">
                     <!-- menu -->
                     <div id="switch" onclick="toggleMode()" >
                         <button>
@@ -29,22 +29,30 @@
                 <!-- </div> -->
                 <div class="menu">
                     <ul class="grid">
-                        <li><a href="main.html" class="nav">HOME</a></li>
-                        <li><a href="" class="nav">PORTFÓLIO</a></li>
-                        <li><a href="" class="nav">CONTATO</a></li>
+                        <li><a href="main.html" class="nav" id="home">HOME</a></li>
+                        <li><a href="" class="nav" id="portfolio">PORTFÓLIO</a></li>
+                        <li><a href="" class="nav" id="header_contact">CONTATO</a></li>
 
-                        <div class="language-selector">
+                        <!-- <div class="language-selector">
                             <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
                             <select id="language-select">
                                 <option class="option" value="" disabled selected hidden>  IDIOMA </option>
                                 <option class="option" value="pt">PORTUGUÊS</option>
                                 <option class="option" value="en">INGLÊS</option>
                                 <option class="option" value="es">ESPANHOL</option>
-                                <!-- Adicione mais idiomas aqui -->
+
                             </select>
 
+                        </div> -->
+                        <div class="language-selector">
+                            <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
+                            <select id="language-select" onchange="changeLanguage(this.value)" onmouseover="openOptions()" onmouseout="closeOptions()">
+                                <option value="hidden" id="language" disable selected hidden>IDIOMA</option>
+                                <option value="pt" id="portuguese">PORTUGUÊS</option>
+                                <option value="en" id="english">INGLÊS</option>
+                            </select>
                         </div>
-
+                        
 
                     </ul>
 
@@ -63,81 +71,81 @@
                 <div class="container grid">
                     <div class="texts">
                         <h1 class="title" id="greeting">Contato.</h1>
-                        <p class="text">Sua história fará parte da nossa.</p>
+                        <p class="text" id="story">Sua história fará parte da nossa.</p>
                     </div>
                     <form id="formulario" action="https://formsubmit.co/ajax/contato@figzstudio.com" method="post" data-form>
 
                         
                         <div class="quest">
                             <div class="quest-content">
-                                <label class="text">Nome </label>
-                                <p class="subtext">(Obrigatório)</p>
+                                <label class="text" id="nome">Nome </label>
+                                <p class="subtext" id="required1">(Obrigatório)</p>
                             </div>
-                            <input class="input" type="text" name="Nome" placeholder="Nome Completo." autocomplete="off">
+                            <input class="input" id="fullname" type="text" name="Nome" placeholder="Nome Completo." autocomplete="off">
                         </div>
 
                         <div class="quest">
                             <div class="quest-content">
 
-                                <label class="text">Empresa</label>
-                                <p class="subtext">(Obrigatório)</p>
+                                <label class="text" id="enterprise">Empresa</label>
+                                <p class="subtext" id="required2">(Obrigatório)</p>
                             </div>
-                            <input class="input" type="text" name="Projeto" id="enterprise" placeholder="Nome do Projeto." autocomplete="off">
+                            <input class="input" type="text" name="Projeto" id="enterprise_placeholder" placeholder="Nome do Projeto." autocomplete="off">
                         </div>
 
                         
                         <div class="quest">
                             <div class="quest-content">
-                                <label class="text">Email </label>
-                                <p class="subtext"> (Obrigatório)</p>
+                                <label class="text" id="email">Email </label>
+                                <p class="subtext" id="required3"> (Obrigatório)</p>
 
                             </div>
-                            <input class="input" type="email" name="Email" placeholder="@" autocomplete="off">
+                            <input class="input" type="email" id="email_placeholder" name="Email" placeholder="@" autocomplete="off">
                         </div>
 
                         <div class="quest">
                             <div class="quest-content">
 
-                                <label class="text" for="telefone">Whatsapp </label>
-                                <p class="subtext"> (Obrigatório)</p>
+                                <label class="text" for="telefone" id="whatsapp">Whatsapp </label>
+                                <p class="subtext" id="required4"> (Obrigatório)</p>
                             </div>
                             <input class="input" type="tel" id="telefone" name="Whatsapp" placeholder="(XX) XXXXX-XXXX" maxlength="15"  autocomplete="off" oninput="formatPhoneNumber()">
                         </div>
                         
                         <div class="quest">
                             <div class="quest-content">
-                                <label class="text" for="opcoes">Nº de colaboradores</label>
-                                <p class="subtext">(Obrigatório)</p>
+                                <label class="text" for="opcoes" id="employees">Nº de colaboradores</label>
+                                <p class="subtext" id="required5">(Obrigatório)</p>
                             </div>
-                            <select class="input" id="opcoes" name="Colaboradores" placeholder="Selecione uma opção">
-                                <option value="" disabled selected hidden>Escolha uma opção</option>
-                                <option class="option" value="1-10">1-10 colaboradores</option>
-                                <option class="option" value="11-50">11-50 colaboradores</option>
-                                <option class="option" value="51-100">51-100 colaboradores</option>
-                                <option class="option" value="100+">100 ou mais colaboradores</option>
+                            <select class="input select-fun" id="opcoes" name="Colaboradores">
+                                <option value="" id="employees_placeholder" disabled selected hidden>Selecione uma opção</option>
+                                <option class="option" id="option_employees1" value="1-10">1-10 colaboradores</option>
+                                <option class="option" id="option_employees2" value="11-50">11-50 colaboradores</option>
+                                <option class="option" id="option_employees3" value="51-100">51-100 colaboradores</option>
+                                <option class="option" id="option_employees4" value="100+">100 ou mais colaboradores</option>
                             </select>
 
                         </div>
                         
                         <div class="quest">
                         <div class="quest-content">
-                            <label class="text">Qual o seu faturamento mensal?
+                            <label class="text" id="billing">Qual o seu faturamento mensal?
                             </label>
-                            <p class="subtext">(Obrigatório)</p>
+                            <p class="subtext" id="required6">(Obrigatório)</p>
                         </div>
-                            <input class="input" type="text" name="Faturamento da empresa" placeholder="Digite um número aproximado" autocomplete="off" >
+                            <input class="input" type="text" name="Faturamento da empresa" id="billing_placeholder" placeholder="Digite um número aproximado" autocomplete="off" >
                             </div>
                             
                             <div class="quest">
                                 <div class="quest-content">
 
-                                    <label class="text" for="opcoes">O valor que você espera investir está entre R$3.000,00 & R$15.000,00? </label>
-                                    <p class="subtext">(Obrigatório)</p>
+                                    <label class="text" for="opcoes" id="investment">O valor que você espera investir está entre R$3.000,00 & R$15.000,00? </label>
+                                    <p class="subtext" id="required7">(Obrigatório)</p>
                                 </div>
-                                <select class="input" id="opcoes" name="Investimento">
-                                    <option value="" disabled selected hidden>Escolha uma opção</option>
-                                    <option class="option" value="Sim">Sim</option>
-                                    <option class="option" value="Não">Não</option>
+                                <select class="input" id="opcoes2" name="Investimento">
+                                    <option value="" id="investment_placeholder" disabled selected hidden>Selecione uma opção</option>
+                                    <option class="option" id="option_investment1" value="Sim">Sim</option>
+                                    <option class="option" id="option_investment2" value="Não">Não</option>
                                 </select>
                                 
                             </div>
@@ -146,32 +154,34 @@
 
                             <div class="quest">
                             <div class="quest-content">
-                                <label class="text">Onde nos encontrou? </label>
-                                <p class="subtext"> (Obrigatório)</p>
+                                <label class="text" id="where">Onde nos encontrou? </label>
+                                <p class="subtext" id="required8"> (Obrigatório)</p>
                             </div>
 
-                            <input class="input" type="text" name="Onde nos encontrou" placeholder="Ex: redes sociais" autocomplete="off">
+                            <input class="input" type="text" name="Onde nos encontrou" id="where_placeholder" placeholder="Ex: Instagram" autocomplete="off">
                             </div>
 
                             <div class="quest">
                                 <div class="quest-content">
-                                    <label class="text">Quais são seus concorrentes? </label>
-                                    <p class="subtext"> (Obrigatório)</p>
+                                    <label class="text" id="concurrent">Quais são seus concorrentes? </label>
+                                    <p class="subtext" id="required9"> (Obrigatório)</p>
                                 </div>
-                            <input class="input" type="text" name="Empresa(s)" placeholder="Nome da(s) empresa(s)" autocomplete="off">
+                            <input class="input" type="text" id="concurrent_placeholder" name="Empresa(s)" placeholder="Nome da(s) empresa(s)" autocomplete="off">
                             </div>
 
                         <div class="quest">
                             <div class="quest-content">
 
-                                <label class="text">Mensagem </label>
-                                <p class="subtext">(Obrigatório)</p>
+                                <label class="text" id="message">Mensagem </label>
+                                <p class="subtext" id="required10">(Obrigatório)</p>
                             </div>
-                            <textarea name="Mensagem" id="" cols="30" rows="10" placeholder="Conte-me um pouco sobre o projeto."></textarea>
+                            <textarea name="Mensagem" id="message_placeholder" cols="30" rows="10" placeholder="Conte-me um pouco sobre o projeto."></textarea>
                         </div>
 
                         <div class="content-button">
-                            <button class="button" id="button" type="submit" data-button>Enviar.<img class="diagonal-arrow" src="./assets/images/submit-arrow.svg" alt=""></button>
+                            <button class="button" id="button" type="submit" data-button>Enviar.
+                                <img class="diagonal-arrow" id="diagonal_arrow" src="./assets/images/submit-arrow.svg" alt="">
+                            </button>
                         </div>
 
                         
@@ -185,15 +195,15 @@
     
         <footer id="footer" class="section">
             <div class="footer-text">
-                <p class="text">Aguardo seu contato!</p>
-                <p class="text">Solicite um orçamento via email: contato@figzstudio.com</p>
+                <p class="text" id="footer_title">Aguardo seu contato!</p>
+                <p class="text" id="footer_subtitle">Solicite um orçamento via email: contato@figzstudio.com</p>
             </div>
             <ul>
                 <li class="footer">
-                    <a class="link" target="_blank" href="https://www.behance.net/figueiredonetodesign">Behance</a>
+                    <a class="link" id="behance" target="_blank" href="https://www.behance.net/figueiredonetodesign">Behance</a>
                 </li>
                 <li class="footer">
-                    <a class="link" target="_blank" href="https://www.instagram.com/figzneto/">Instagram</a>
+                    <a class="link"  id="instagram" target="_blank" href="https://www.instagram.com/figzneto/">Instagram</a>
                 </li>
             </ul>
         </footer>
