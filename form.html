@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figz - Figz Studio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="style-form.css">
+
+
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <div id="app-form">
+
+        <header id="header">
+            <nav class="container">
+                <!-- <div class="header-content"> -->
+
+                    <img class="logo" id="logo" src="./assets/images/logo-black.svg" alt="">
+                    <!-- menu -->
+                    <div id="switch" onclick="toggleMode()" >
+                        <button>
+                        </button>
+        
+                    </div>
+                <!-- </div> -->
+                <div class="menu">
+                    <ul class="grid">
+                        <li><a href="index.html" class="nav" id="home">HOME</a></li>
+                        <li><a href="" class="nav" id="portfolio">PORTFÓLIO</a></li>
+                        <li><a href="./form.html" class="nav" id="header_contact">CONTATO</a></li>
+
+                        <!-- <div class="language-selector">
+                            <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
+                            <select id="language-select">
+                                <option class="option" value="" disabled selected hidden>  IDIOMA </option>
+                                <option class="option" value="pt">PORTUGUÊS</option>
+                                <option class="option" value="en">INGLÊS</option>
+                                <option class="option" value="es">ESPANHOL</option>
+
+                            </select>
+
+                        </div> -->
+                        <div class="language-selector">
+                            <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
+                            <select id="language-select" onchange="changeLanguage(this.value)" onmouseover="openOptions()" onmouseout="closeOptions()">
+                                <option value="hidden" id="language" disable selected hidden>IDIOMA</option>
+                                <option value="pt" id="portuguese">PORTUGUÊS</option>
+                                <option value="en" id="english">INGLÊS</option>
+                            </select>
+                        </div>
+                        
+
+                    </ul>
+
+                </div>
+                <div class="toggle icon-menu"></div>
+                <div class="toggle icon-close"></div>
+            </nav>
+
+        </header>
+
+        
+        <main>
+
+
+            <section id="form" class="section">
+                <div class="container grid">
+                    <div class="texts">
+                        <h1 class="title" id="greeting">Contato.</h1>
+                        <p class="text" id="story">Sua história fará parte da nossa.</p>
+                    </div>
+                    <form id="formulario" action="https://formsubmit.co/ajax/contato@figzstudio.com" method="post" data-form>
+
+                        
+                        <div class="quest">
+                            <div class="quest-content">
+                                <label class="text" id="nome">Nome </label>
+                                <p class="subtext" id="required1">(Obrigatório)</p>
+                            </div>
+                            <input class="input" id="fullname" type="text" name="Nome" placeholder="Nome Completo." autocomplete="off">
+                        </div>
+
+                        <div class="quest">
+                            <div class="quest-content">
+
+                                <label class="text" id="enterprise">Empresa</label>
+                                <p class="subtext" id="required2">(Obrigatório)</p>
+                            </div>
+                            <input class="input" type="text" name="Projeto" id="enterprise_placeholder" placeholder="Nome do Projeto." autocomplete="off">
+                        </div>
+
+                        
+                        <div class="quest">
+                            <div class="quest-content">
+                                <label class="text" id="email">Email </label>
+                                <p class="subtext" id="required3"> (Obrigatório)</p>
+
+                            </div>
+                            <input class="input" type="email" id="email_placeholder" name="Email" placeholder="@" autocomplete="off">
+                        </div>
+
+                        <div class="quest">
+                            <div class="quest-content">
+
+                                <label class="text" for="telefone" id="whatsapp">Whatsapp </label>
+                                <p class="subtext" id="required4"> (Obrigatório)</p>
+                            </div>
+                            <input class="input" type="tel" id="telefone" name="Whatsapp" placeholder="(XX) XXXXX-XXXX" maxlength="15"  autocomplete="off" oninput="formatPhoneNumber()">
+                        </div>
+                        
+                        <div class="quest">
+                            <div class="quest-content">
+                                <label class="text" for="opcoes" id="employees">Nº de colaboradores</label>
+                                <p class="subtext" id="required5">(Obrigatório)</p>
+                            </div>
+                            <select class="input select-fun" id="opcoes" name="Colaboradores">
+                                <option value="" id="employees_placeholder" disabled selected hidden>Selecione uma opção</option>
+                                <option class="option" id="option_employees1" value="1-10">1-10 colaboradores</option>
+                                <option class="option" id="option_employees2" value="11-50">11-50 colaboradores</option>
+                                <option class="option" id="option_employees3" value="51-100">51-100 colaboradores</option>
+                                <option class="option" id="option_employees4" value="100+">100 ou mais colaboradores</option>
+                            </select>
+
+                        </div>
+                        
+                        <div class="quest">
+                        <div class="quest-content">
+                            <label class="text" id="billing">Qual o seu faturamento mensal?
+                            </label>
+                            <p class="subtext" id="required6">(Obrigatório)</p>
+                        </div>
+                            <input class="input" type="text" name="Faturamento da empresa" id="billing_placeholder" placeholder="Digite um número aproximado" autocomplete="off" >
+                            </div>
+                            
+                            <div class="quest">
+                                <div class="quest-content">
+
+                                    <label class="text" for="opcoes" id="investment">O valor que você espera investir está entre R$3.000,00 & R$15.000,00? </label>
+                                    <p class="subtext" id="required7">(Obrigatório)</p>
+                                </div>
+                                <select class="input" id="opcoes2" name="Investimento">
+                                    <option value="" id="investment_placeholder" disabled selected hidden>Selecione uma opção</option>
+                                    <option class="option" id="option_investment1" value="Sim">Sim</option>
+                                    <option class="option" id="option_investment2" value="Não">Não</option>
+                                </select>
+                                
+                            </div>
+
+
+
+                            <div class="quest">
+                            <div class="quest-content">
+                                <label class="text" id="where">Onde nos encontrou? </label>
+                                <p class="subtext" id="required8"> (Obrigatório)</p>
+                            </div>
+
+                            <input class="input" type="text" name="Onde nos encontrou" id="where_placeholder" placeholder="Ex: Instagram" autocomplete="off">
+                            </div>
+
+                            <div class="quest">
+                                <div class="quest-content">
+                                    <label class="text" id="concurrent">Quais são seus concorrentes? </label>
+                                    <p class="subtext" id="required9"> (Obrigatório)</p>
+                                </div>
+                            <input class="input" type="text" id="concurrent_placeholder" name="Empresa(s)" placeholder="Nome da(s) empresa(s)" autocomplete="off">
+                            </div>
+
+                        <div class="quest">
+                            <div class="quest-content">
+
+                                <label class="text" id="message">Mensagem </label>
+                                <p class="subtext" id="required10">(Obrigatório)</p>
+                            </div>
+                            <textarea name="Mensagem" id="message_placeholder" cols="30" rows="10" placeholder="Conte-me um pouco sobre o projeto."></textarea>
+                        </div>
+
+                        <div class="content-button">
+                            <button class="button" id="button" type="submit" data-button>Enviar.
+                                <img class="diagonal-arrow" id="diagonal_arrow" src="./assets/images/submit-arrow.svg" alt="">
+                            </button>
+                        </div>
+
+                        
+            
+                </div>
+                </form>
+        
+            </section>
+        </main>
+
+    
+        <footer id="footer" class="section">
+            <div class="footer-text">
+                <p class="text" id="footer_title">Aguardo seu contato!</p>
+                <p class="text" id="footer_subtitle">Solicite um orçamento via email: contato@figzstudio.com</p>
+            </div>
+            <ul>
+                <li class="footer">
+                    <a class="link" id="behance" target="_blank" href="https://www.behance.net/figueiredonetodesign">Behance</a>
+                </li>
+                <li class="footer">
+                    <a class="link"  id="instagram" target="_blank" href="https://www.instagram.com/figzneto/">Instagram</a>
+                </li>
+            </ul>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        
+        <a href="#form" class="back-to-top"><i class="icon-arrow-up"></i></a>
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="script-form.js"></script>
+    </div>
+
+</body>
+</html>

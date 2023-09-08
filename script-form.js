@@ -4,7 +4,6 @@ const scrollReveal = ScrollReveal({
     origin: 'top',
     distance: '40px',
     duration: 700,
-    // reset: true
 })
 
 scrollReveal.reveal(
@@ -583,6 +582,9 @@ function changeLanguage(lang) {
         }
     }
 
+
+
+    
     window.addEventListener('scroll', function () {
         backToTop()
         changeHeaderWhenScroll()
