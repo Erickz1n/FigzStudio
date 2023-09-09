@@ -419,8 +419,6 @@ nav.show div.icon-close {
     height: .2rem;
     display: flex;
     flex-direction: row;
-    z-index: 1;
-    position: absolute;
     width: 100%;
 }
 
