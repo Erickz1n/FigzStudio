@@ -390,8 +390,8 @@ nav.show div.icon-close {
 /* THIRD  */
 
 #third {
-    background-color: var(--base-color);
-    color: var(--background-color);
+    background-color: #000;
+    color: #ffffff;
     width: 100%;
 }
 
@@ -414,8 +414,20 @@ nav.show div.icon-close {
     gap: 1rem;
 }
 
+.fourth-content .subtitle {
+    color: #000;
+}
+
+.construction {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
 .line {
-    background-color: var(--base-color);
+    background-color: #000;
     height: .2rem;
     display: flex;
     flex-direction: row;
@@ -430,6 +442,24 @@ nav.show div.icon-close {
 .menu {
     display: flex;
 }
+
+
+@media (min-width: 1200px) {
+    .construction {
+        display: grid;
+        grid-template-areas: 
+        "A B"
+    ;
+        gap: 5.8rem;
+        font-size: 3.1rem;
+    }
+
+    #fourth .title {
+        font-size: 6.2rem;
+    }
+}
+
+
 /* 
 #main {
     display: flex;
