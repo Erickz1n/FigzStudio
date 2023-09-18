@@ -32,6 +32,7 @@
     --base-color: hsl(0, 0%, 0%);
     --surface-color: hsla(0, 0%, 100%, 0.007);
     --background-color: hsl(0, 0%, 100%);
+    --background-fourth: hsla(0, 0%, 56%, 1);
     --surface-color-menu-active: hsla(0, 0%, 13%, 0.204);
     --header-height: 5rem;
     --input-bg: hsl(0, 0%, 85%);
@@ -42,6 +43,8 @@
 .dark {
     --base-color: #ffffff;
     --background-color: #000000;
+    --background-fourth: rgb(0, 0, 0);
+
     --input-bg: #3e3e3e;
     --input-placeholder-color: hsl(0, 0%, 100%); 
     --switch-bg-url: url(./assets/images/sun-icon-white.svg);
@@ -52,6 +55,8 @@
 html {
     scroll-behavior: smooth;
     transition: all .3s;
+    overflow-x: hidden;
+
 }
 
 #app-index {
@@ -358,7 +363,6 @@ nav.show div.icon-close {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-
 }
 
 #first .texts {
@@ -398,7 +402,7 @@ nav.show div.icon-close {
 /* FOURTH  */
 
 #fourth {
-    background-color: hsla(0, 0%, 56%, 1);
+    background-color: var(--background-fourth);
 }
 
 #fourth .title {
@@ -415,7 +419,7 @@ nav.show div.icon-close {
 }
 
 .fourth-content .subtitle {
-    color: #000;
+    color: var(--base-color);
 }
 
 .construction {
@@ -427,7 +431,7 @@ nav.show div.icon-close {
 }
 
 .line {
-    background-color: #000;
+    background-color: var(--base-color);
     height: .2rem;
     display: flex;
     flex-direction: row;
@@ -437,6 +441,29 @@ nav.show div.icon-close {
 .input .option {
     padding: 2rem;
     width: 2rem;
+}
+
+.fourth-button {
+    width: 100%;
+}
+
+.show-more-button {
+    font-size: 2.5rem;
+    font-family: gilroy-bold, sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    padding: 2rem 3rem;
+    background-color: var(--base-color);
+    color: var(--background-color);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.show-more-arrow {
+    width: 1.5rem;
 }
 
 .menu {
@@ -454,9 +481,27 @@ nav.show div.icon-close {
         font-size: 3.1rem;
     }
 
+    
+    #fourth .title-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 6.2rem;
+        width: 100%;
+        gap: 20rem;
+
+    }
+
     #fourth .title {
         font-size: 6.2rem;
     }
+
+    #fourth .line {
+        position: absolute;
+        width: 100%;
+        margin-left: 68rem;
+    }
+
 }
 
 
