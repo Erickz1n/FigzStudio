@@ -322,7 +322,7 @@ nav.show div.icon-close {
 
 /* FIRST  */
 
-#first, #second, #third, #fourth, #fifth {
+#first, #second, #third, #fourth{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,7 +354,7 @@ nav.show div.icon-close {
 }
 
 
-#first .container, #second .container, #third .container, #fourth .container, #sixth .container  {
+#first .container, #second .container, #third .container, #fourth .container  {
     width: 100%;
     gap: 5rem;
 }
@@ -450,14 +450,33 @@ nav.show div.icon-close {
 
 /* FIFTH */
 
-#fifth .title {
-    font-size: 3rem;
-    color: #000;
+#fifth .fifth-content {
+    display: flex;
 }
 
-.fifth-content, #fifth {
+#fifth .title {
+    font-size: 3rem;
+    color: var(--base-color);
+
+}
+
+/* .fifth-content, #fifth{
     display: flex;
+    justify-content: center;
     align-items: start;
+} */
+
+#fifth p {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: var(--base-color);
+    margin-left: 2.6rem;
+}
+
+#fifth h1 {
+    font-family: gilroy-bold, 'sans-serif';
+    margin-bottom: 5rem;
 }
 
 #fifth details {
@@ -467,85 +486,70 @@ nav.show div.icon-close {
     transition: all .5s;
     width: 100%;
     gap: 3rem;
+    cursor: pointer;
+    color: var(--base-color);
 }
 
-details::-webkit-details-marker {
-    display: none;
+#fifth summary {
+    color: var(--base-color);
+
 }
 
-    details {
-        cursor: pointer;
-        user-select: none;
-    }
-    
-    details summary {
-        outline: none;
-        transition: all 0.3s ease; /* Adiciona uma transição de 0,3 segundos para suavizar a animação. */
-    }
-    
-    details[open] summary::after {
-        transition: all .5s ease-in-out;
-        content: "-";
-    }
-    
-    /* Altera o estilo do summary quando o details está aberto */
-    details:not([open]) summary::after {
-        transition: all .5s ease-in-out;
+details>summary {
+    list-style: none;
+}
 
-        content: "+";
-    }
-    
-    /* Animação quando o details é aberto */
-    details[open] p {
-        max-height: 0;
-        opacity: 0;
-        transition: all 0.3s ease; /* Adiciona uma transição de 0,3 segundos para suavizar a animação. */
-    }
-    
-    details[open] p {
-        max-height: 1000px; /* Um valor grande o suficiente para acomodar seu conteúdo. */
-        opacity: 1;
-    }
+summary::before {
+    content: '+';
+    margin-right: 1rem;
+    color: var(--base-color);
+}
+
+  /* modifica a seta pra baixo quando clicar */
+details[open] summary:before {
+    content: "-";
+}
+
 
 
 /* SIXTH */
 
 @keyframes slide {
-    0% {
+    from {
         transform: translateX(0);
     }
-    100% {
-        transform: translateX(-100%);
+    to {
+        transform: translateX(-100%)
     }
+    
 }
 
-.banner {
-    display: flex;
-    gap: 5rem;
-    white-space: nowrap;
-
-    /* margin: 0 3rem; */
+.words {
     overflow: hidden;
-    /* width: 100%; */
+    /* padding: 6rem 0; */
+    white-space: nowrap;
+    display: flex;
 }
 
-
-.banner-slide {
-    /* background-color: #3e3e3e; */
-    /* width: 100%; */
+.words-slide {
     display: flex;
-    gap: 5rem;
-
+    /* gap: 4rem; */
     animation: 5s slide infinite linear;
 }
 
-.banner-slide
-
-.name {
-    /* margin: 0 3rem; */
+.words-slide p {
     font-size: 3rem;
-    
+    margin: 0 4rem;
 }
+
+.sixth-content {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    /* margin: 0 4rem; */
+}
+
+/* */
 
 .show-more-button {
     font-size: 2.5rem;
