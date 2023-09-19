@@ -422,6 +422,8 @@ nav.show div.icon-close {
 
 #fourth {
     background-color: var(--background-fourth);
+    transition: all .3s;
+
 }
 
 #fourth .title{
