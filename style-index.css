@@ -418,6 +418,10 @@ nav.show div.icon-close {
     width: 100%;
 }
 
+#third h1 {
+    font-size: 3rem;
+}
+
 /* FOURTH  */
 
 #fourth {
