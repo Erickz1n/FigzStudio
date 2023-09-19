@@ -614,6 +614,76 @@ details[open] summary:before {
 
 
 @media (min-width: 1200px) {
+    #first .first-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    #first .title {
+        font-size: 6.2rem;
+        /* width: 50rem; */
+    }
+
+    #first img {
+        width: 53.7rem;
+    }
+
+    #second .second-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        justify-content: center;
+        align-items: center;
+    }
+
+    #second img {
+        width: 53rem;
+    }
+
+    #second .client-projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #second .subtitle {
+        font-size: 3.1rem;
+    }
+
+    #third .third-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        justify-content: center;
+        align-items: center;
+    }
+
+    #third .text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #third .text h1 {
+        font-size: 6.2rem;
+        font-family: gilroy-bold, 'sans-serif';
+    }
+
+    #third .text h2 {
+        font-size: 3.1rem;
+        font-weight: 400;
+
+    }
+
+    #third .text p {
+        font-size: 2.2rem;
+        font-weight: 400;
+
+    }
+
     .construction {
         display: grid;
         grid-template-areas: 
@@ -631,11 +701,20 @@ details[open] summary:before {
         font-size: 6.2rem;
         width: 100%;
         gap: 20rem;
-
+        margin-bottom: 6.7rem;
     }
 
     #fourth .title {
         font-size: 6.2rem;
+    }
+
+    #fourth h2 {
+        font-size: 3.1rem;
+    }
+
+    #fourth p {
+        font-size: 3.1rem;
+        font-weight: 400;
     }
 
     #fourth .line {
@@ -644,6 +723,18 @@ details[open] summary:before {
         margin-left: 68rem;
     }
 
+    #fifth .title {
+        font-size: 6.2rem;
+    }
+
+    #fifth .paragraph {
+        font-size: 3.1rem;
+        margin-left: 4.2rem;
+    }
+
+    #sixth .word {
+        font-size: 6.2rem;
+    }
 }
 
 
