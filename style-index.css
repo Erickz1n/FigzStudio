@@ -59,6 +59,20 @@ html {
 
 }
 
+select {
+    display: flex;
+    border: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: #000000;
+    padding-right: 20px; /* Adicione espaço para sua própria seta personalizada */
+    background: url('caminho/para/sua/seta.png') no-repeat right center;
+}
+
 #app-index {
     color: var(--base-color) ;
     background-color: var(--background-color);
@@ -329,6 +343,11 @@ nav.show div.icon-close {
     align-items: center;
 }
 
+#first, #second, #third, #fourth, #fifth, #sixth{
+    transition: all .3s;
+
+}
+
 .first-content, .second-content, .third-content, .fourth-content, .fifth-content {
     display: flex;
     flex-direction: column;
@@ -420,6 +439,8 @@ nav.show div.icon-close {
 
 .fourth-content .subtitle {
     color: var(--base-color);
+    transition: all .3s;
+
 }
 
 .construction {
@@ -436,16 +457,27 @@ nav.show div.icon-close {
     display: flex;
     flex-direction: row;
     width: 100%;
+    transition: all .3s;
+
 }
 
 .input .option {
     padding: 2rem;
     width: 2rem;
+    
 }
 
 .fourth-button {
     width: 100%;
+    transition: all .3s;
+    
 }
+
+#fourth a {
+    transition: all .3s;
+
+}
+
 
 
 /* FIFTH */
