@@ -322,14 +322,14 @@ nav.show div.icon-close {
 
 /* FIRST  */
 
-#first, #second, #third, #fourth {
+#first, #second, #third, #fourth, #fifth {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.first-content, .second-content, .third-content, .fourth-content {
+.first-content, .second-content, .third-content, .fourth-content, .fifth-content {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -354,7 +354,7 @@ nav.show div.icon-close {
 }
 
 
-#first .container, #second .container, #third .container, #fourth .container {
+#first .container, #second .container, #third .container, #fourth .container, #sixth .container  {
     width: 100%;
     gap: 5rem;
 }
@@ -405,7 +405,7 @@ nav.show div.icon-close {
     background-color: var(--background-fourth);
 }
 
-#fourth .title {
+#fourth .title{
     font-size: 3rem;
     font-family: gilroy-bold;
     font-weight: bold;
@@ -445,6 +445,106 @@ nav.show div.icon-close {
 
 .fourth-button {
     width: 100%;
+}
+
+
+/* FIFTH */
+
+#fifth .title {
+    font-size: 3rem;
+    color: #000;
+}
+
+.fifth-content, #fifth {
+    display: flex;
+    align-items: start;
+}
+
+#fifth details {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    width: 100%;
+    gap: 3rem;
+}
+
+details::-webkit-details-marker {
+    display: none;
+}
+
+    details {
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    details summary {
+        outline: none;
+        transition: all 0.3s ease; /* Adiciona uma transição de 0,3 segundos para suavizar a animação. */
+    }
+    
+    details[open] summary::after {
+        transition: all .5s ease-in-out;
+        content: "-";
+    }
+    
+    /* Altera o estilo do summary quando o details está aberto */
+    details:not([open]) summary::after {
+        transition: all .5s ease-in-out;
+
+        content: "+";
+    }
+    
+    /* Animação quando o details é aberto */
+    details[open] p {
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease; /* Adiciona uma transição de 0,3 segundos para suavizar a animação. */
+    }
+    
+    details[open] p {
+        max-height: 1000px; /* Um valor grande o suficiente para acomodar seu conteúdo. */
+        opacity: 1;
+    }
+
+
+/* SIXTH */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.banner {
+    display: flex;
+    gap: 5rem;
+    white-space: nowrap;
+
+    /* margin: 0 3rem; */
+    overflow: hidden;
+    /* width: 100%; */
+}
+
+
+.banner-slide {
+    /* background-color: #3e3e3e; */
+    /* width: 100%; */
+    display: flex;
+    gap: 5rem;
+
+    animation: 5s slide infinite linear;
+}
+
+.banner-slide
+
+.name {
+    /* margin: 0 3rem; */
+    font-size: 3rem;
+    
 }
 
 .show-more-button {
