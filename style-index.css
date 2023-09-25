@@ -418,6 +418,12 @@ nav.show div.icon-close {
     width: 100%;
 }
 
+#third .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 #third h1 {
     font-size: 3rem;
 }
@@ -609,14 +615,6 @@ details[open] summary:before {
 .menu {
     display: flex;
 }
-
-
-@media (min-width: 1200px) {
-
-}
-
-
-
 
 /* LANGUAGE */
 
@@ -1125,7 +1123,7 @@ details[open] summary:before {
 
 @media (min-width: 767px) {
     .container {
-        max-width: 1120px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
