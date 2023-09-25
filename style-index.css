@@ -368,7 +368,7 @@ nav.show div.icon-close {
 }
 
 #first .title {
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw, 5rem);
     font-family: gilroy-bold, sans;
 }
 
@@ -488,6 +488,11 @@ nav.show div.icon-close {
 
 /* FIFTH */
 
+#fifth {
+    transition: all .3s;
+
+}
+
 #fifth .fifth-content {
     display: flex;
 }
@@ -495,26 +500,20 @@ nav.show div.icon-close {
 #fifth .title {
     font-size: 3rem;
     color: var(--base-color);
-
+    transition: all .3s;
 }
 
-/* .fifth-content, #fifth{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-} */
-
 #fifth p {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     color: var(--base-color);
     margin-left: 2.6rem;
+    transition: all .3s;
+
 }
 
 #fifth h1 {
     font-family: gilroy-bold, 'sans-serif';
     margin-bottom: 5rem;
+    transition: all .3s;
 }
 
 #fifth details {
@@ -526,11 +525,11 @@ nav.show div.icon-close {
     gap: 3rem;
     cursor: pointer;
     color: var(--base-color);
+    transition: all .3s;
 }
 
 #fifth summary {
     color: var(--base-color);
-
 }
 
 details>summary {
@@ -541,14 +540,14 @@ summary::before {
     content: '+';
     margin-right: 1rem;
     color: var(--base-color);
+    transition: all .3s;
+
 }
 
-  /* modifica a seta pra baixo quando clicar */
 details[open] summary:before {
     content: "-";
+    transition: all .3s;
 }
-
-
 
 /* SIXTH */
 
@@ -584,7 +583,6 @@ details[open] summary:before {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    /* margin: 0 4rem; */
 }
 
 /* */
@@ -614,184 +612,11 @@ details[open] summary:before {
 
 
 @media (min-width: 1200px) {
-    #first .first-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        align-items: center;
-        margin-top: 5rem;
-    }
 
-    #first .title {
-        font-size: 6.2rem;
-        /* width: 50rem; */
-    }
-
-    #first img {
-        width: 53.7rem;
-    }
-
-    #second .second-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        justify-content: center;
-        align-items: center;
-    }
-
-    #second img {
-        width: 53rem;
-    }
-
-    #second .client-projects {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    #second .subtitle {
-        font-size: 3.1rem;
-    }
-
-    #third .third-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        justify-content: center;
-        align-items: center;
-    }
-
-    #third .text {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    #third .text h1 {
-        font-size: 6.2rem;
-        font-family: gilroy-bold, 'sans-serif';
-    }
-
-    #third .text h2 {
-        font-size: 3.1rem;
-        font-weight: 400;
-
-    }
-
-    #third .text p {
-        font-size: 2.2rem;
-        font-weight: 400;
-
-    }
-
-    .construction {
-        display: grid;
-        grid-template-areas: 
-        "A B"
-    ;
-        gap: 5.8rem;
-        font-size: 3.1rem;
-    }
-
-    
-    #fourth .title-line {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 6.2rem;
-        width: 100%;
-        gap: 20rem;
-        margin-bottom: 6.7rem;
-    }
-
-    #fourth .title {
-        font-size: 6.2rem;
-    }
-
-    #fourth h2 {
-        font-size: 3.1rem;
-    }
-
-    #fourth p {
-        font-size: 3.1rem;
-        font-weight: 400;
-    }
-
-    #fourth .line {
-        position: absolute;
-        width: 100%;
-        margin-left: 68rem;
-    }
-
-    #fifth .title {
-        font-size: 6.2rem;
-    }
-
-    #fifth .paragraph {
-        font-size: 3.1rem;
-        margin-left: 4.2rem;
-    }
-
-    #sixth .word {
-        font-size: 6.2rem;
-    }
 }
 
 
-/* 
-#main {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-} */
 
-/* #form .title {
-    font-size: 3rem;
-    font-family: gilroy-bold, sans-serif;
-}
-
-#form .text {
-    font-size: clamp(2rem, 3vw, 3rem);
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-#form .subtext {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    font-family: gilroy, sans-serif;
-    align-items: center;
-}  */
-
-#form button {
-    background-color: var(--base-color);
-    color: var(--background-color);
-    font-size: 2rem;
-
-    padding: 3rem;
-
-    width: auto;
-    height: 6.2rem;
-    
-    border: none;
-
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    /* justify-content: space-between; */
-
-    cursor: pointer;
-    font-family: gilroy-bold, sans-serif;
-    transition: all .3s;
-}
-
-#form button:disabled {
-    cursor: not-allowed;
-}
-
-#form button img {
-    width: 1.3rem;
-}
 
 /* LANGUAGE */
 
@@ -1022,64 +847,157 @@ details[open] summary:before {
         width: 1.8rem;
     }
 
-    /* FORMULARIO */
 
-    #form {
-        padding: 5rem 0 10rem 0;
 
-    }
+    /* FIRST */
 
-    #form .container{
-        margin-top: 10rem;
-        display: flex;
-        flex-direction: row;
-    }
-
-    #form .texts {
-        width: 100%;
-    }
-
-    #form .title {
-        font-size: 6.2rem;
-    }
-
-    #form .text {
-        font-size: 2rem;
-        width: 100%;
-    }
-
-    #form .subtext, #form .input, textarea {
-        font-size: 1.4rem;
-    }
-
-    #form textarea {
-        min-height: 17rem;
-        resize: vertical;
-    }
-
-    #form form {
-        width: 100%;
-    }
-
-    #form .quest-content {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    #form button {
-        font-size: 2.3rem;
-        gap: 1rem;
-        width: 20rem;
+    #first .first-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
         align-items: center;
         justify-content: center;
+        margin-top: 3rem;
+    }
+
+    #first .title {
+        font-size: 5rem;
+    }
+
+    #first img {
+        width: 53.7rem;
+    }
+
+    /* SECOND */
+
+    #second .second-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        justify-content: center;
+        align-items: center;
+    }
+
+    #second img {
+        width: 53.7rem;
 
     }
 
-    #form button img {
-        width: 1.6rem;
-    transition: all .3s;
+    #second .client-projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
+    #second .subtitle {
+        font-size: 2rem;
+    }
+
+    /* THIRD */
+
+    #third .third-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    #third img {
+        width: 53.7rem;
+    }
+
+    #third .text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #third .text h1 {
+        font-size: 5rem;
+
+        font-family: gilroy-bold, 'sans-serif';
+    }
+
+    #third .text h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        width: 53rem;
+
+    }
+
+    #third .text p {
+        font-size: 1.5rem;
+        font-weight: 400;
+
+    }
+
+    /* FOURTH */
+
+
+    .construction {
+        display: grid;
+        grid-template-areas: 
+        "A B";
+        gap: 5.8rem;
+        font-size: 2rem;
+    }
+
+    
+    #fourth .title-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 5rem;
+        width: 100%;
+        gap: 20rem;
+        margin-bottom: 6.7rem;
+    }
+
+    #fourth .title {
+        font-size: 5rem;
+    }
+
+    #fourth h2 {
+        font-size: 2rem;
+    }
+
+    #fourth p {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    #fourth .line {
+        position: absolute;
+        width: 100%;
+        margin-left: 55rem;
+    }
+    
+
+    /* FIFTH */
+
+
+    #fifth .title {
+        font-size: 5rem;
+    }
+
+    #fifth .paragraph {
+        font-size: 2rem;
+        margin-left: 4.2rem;
+    }
+
+    /* SIXTH */
+
+
+    #sixth {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sixth .word {
+        font-size: 5rem;
     }
 
     /* FOOTER */
@@ -1096,17 +1014,6 @@ details[open] summary:before {
         flex-direction: column;
         align-items: end;
     }
-
-    .success,
-    .error {
-        text-align: center;
-        font-size: 6rem;
-    }
-
-    .success {
-        color: greenyellow;
-    }
-
     /* TROCA DE IDIOMA */
 
     .language-selector {
@@ -1154,10 +1061,10 @@ details[open] summary:before {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* width: 6.4rem; */
+
         background:   var(--switch-bg-url) no-repeat center;
     
-        /* margin: 0.4rem auto; */
+
         border-radius: 50%;
     
         animation: topdown 2s;
@@ -1167,7 +1074,6 @@ details[open] summary:before {
     #switch button {
         width: 3.2rem;
         height: 3.2rem;
-        /* background:   var(--switch-bg-url) no-repeat center; */
         border: 0;
     
         top: 50%;
@@ -1189,16 +1095,11 @@ details[open] summary:before {
     #switch span {
         display: none;
         margin: 0;
-
-    
         background: var(--surface-color);
         border: 1rem solid var(--base-color);
         backdrop-filter: blur(0.4rem);
         -webkit-backdrop-filter: blur(0.4rem);
-
-
     }
-
     
 }
 
@@ -1220,4 +1121,335 @@ details[open] summary:before {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media (min-width: 767px) {
+    .container {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 10rem 0;
+    }
+
+    .button {
+        height: 3.125rem;
+    }
+
+    /* navigation */
+    nav .menu {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+
+    nav .menu ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav .menu ul li a.title {
+        font: 400 1rem var(--body-font);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    nav .menu ul li a.title.active {
+        font-weight: bold;
+        -webkit-font-smoothing: auto;
+    }
+
+    nav .icon-menu {
+        display: none;
+    }
+
+    header .logo {
+        width: 20rem;
+        transition: all 1s;
+        margin-right: 33rem;
+        margin-left: 1rem;
+    }
+
+    #header {
+        height: 8rem;
+        align-items: center;
+    }
+
+    #header nav .menu ul li .nav {
+        font-size: 1.5rem;
+    }
+    #header nav ul{
+        align-items: center;
+        gap: 5.3rem
+    }
+
+    #header button {
+        font-size: 1.5rem;
+        background: none;
+        gap: .5rem;
+    }
+
+    #header button img {
+        width: 1.5rem;
+    }
+
+    #header button .arrow {
+        width: 1.8rem;
+    }
+
+
+
+    /* FIRST */
+
+    #first .first-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    #first .title {
+        font-size: 5rem;
+    }
+
+    #first img {
+        width: 53.7rem;
+    }
+
+    /* SECOND */
+
+    #second .second-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        justify-content: center;
+        align-items: center;
+    }
+
+    #second img {
+        width: 53.7rem;
+
+    }
+
+    #second .client-projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #second .subtitle {
+        font-size: 2rem;
+    }
+
+    /* THIRD */
+
+    #third .third-content {
+        display: grid;
+        grid-template-areas: 
+        'A B';
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    #third img {
+        width: 53.7rem;
+    }
+
+    #third .text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #third .text h1 {
+        font-size: 5rem;
+
+        font-family: gilroy-bold, 'sans-serif';
+    }
+
+    #third .text h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        width: 53rem;
+
+    }
+
+    #third .text p {
+        font-size: 1.5rem;
+        font-weight: 400;
+
+    }
+
+    /* FOURTH */
+
+
+    .construction {
+        display: grid;
+        grid-template-areas: 
+        "A B";
+        gap: 5.8rem;
+        font-size: 2rem;
+    }
+
+    
+    #fourth .title-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 5rem;
+        width: 100%;
+        gap: 20rem;
+        margin-bottom: 6.7rem;
+    }
+
+    #fourth .title {
+        font-size: 5rem;
+    }
+
+    #fourth h2 {
+        font-size: 2rem;
+    }
+
+    #fourth p {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    #fourth .line {
+        position: absolute;
+        width: 100%;
+        margin-left: 55rem;
+    }
+    
+
+    /* FIFTH */
+
+
+    #fifth .title {
+        font-size: 5rem;
+    }
+
+    #fifth .paragraph {
+        font-size: 2rem;
+        margin-left: 4.2rem;
+    }
+
+    /* SIXTH */
+
+
+    #sixth {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sixth .word {
+        font-size: 5rem;
+    }
+
+    /* FOOTER */
+
+    #footer {
+        display: flex;
+        flex-direction: row;
+        gap: 48rem;
+        align-items: center;
+    }
+
+    #footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    /* TROCA DE IDIOMA */
+
+    .language-selector {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: auto;
+
+    }
+
+    #language-select {
+        padding: .5rem;
+        font-size: 1.5rem;
+        background-color: none;
+        color: var(--base-color);
+        border: none;
+        width: auto;
+        cursor: pointer;
+        font-family: gilroy, sans-serif;
+        transition: all .3s;
+
+    }
+    
+    #language-select:focus {
+        outline: none;
+    }
+
+    #language-select option {
+        font-size: 1.5rem;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    .fade-out {
+        opacity: 0;
+    }
+    
+
+    /* switch */
+    #switch {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background:   var(--switch-bg-url) no-repeat center;
+    
+
+        border-radius: 50%;
+    
+        animation: topdown 2s;
+        transition: all .5s;
+    }
+    
+    #switch button {
+        width: 3.2rem;
+        height: 3.2rem;
+        border: 0;
+    
+        top: 50%;
+        right: 0;
+        z-index: 1;
+        transition: outline 0.2s, background 0.5s;
+    
+        animation: slide-back 0.2s;
+    }
+    
+    .dark #switch button {
+        animation: slide-in 0.2s forwards;
+    }
+    
+    #switch button:hover {
+        outline: 0.8rem solid var(--highlight-color);
+    }
+    
+    #switch span {
+        display: none;
+        margin: 0;
+        background: var(--surface-color);
+        border: 1rem solid var(--base-color);
+        backdrop-filter: blur(0.4rem);
+        -webkit-backdrop-filter: blur(0.4rem);
+    }
+    
 }

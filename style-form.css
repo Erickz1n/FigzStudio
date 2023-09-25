@@ -429,11 +429,6 @@ select {
     background: url('caminho/para/sua/seta.png') no-repeat right center;
 }
 
-
-
-
-
-
 #form .quest select {
     display: flex;
     color: var(--input-placeholder-color);
@@ -906,3 +901,7 @@ textarea {
         opacity: 1;
     }
 } */
+
+@media (min-width: 767px) {
+    
+}
