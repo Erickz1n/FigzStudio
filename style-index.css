@@ -800,7 +800,7 @@ details[open].details{
     }
 
     .container {
-        max-width: 1200px;
+        max-width: 100%;
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -852,8 +852,6 @@ details[open].details{
         transition: all 1s;
     }
 
-
-    
     #header {
         height: 8rem;
         align-items: center;
@@ -897,7 +895,7 @@ details[open].details{
     }
 
     #first img {
-        width: 100%;
+        width: 40rem;
     }
 
     /* SECOND */
@@ -911,7 +909,7 @@ details[open].details{
     }
 
     #second img {
-        width: 100%;
+        width: 40rem;
 
     }
 
@@ -937,7 +935,7 @@ details[open].details{
     }
 
     #third img {
-        width: 100%;
+        width: 40rem;
     }
 
     #third .text {
@@ -975,11 +973,11 @@ details[open].details{
     
     #fourth .title-line {
         display: flex;
-        flex-direction: column;
-        /* align-items: center; */
+        flex-direction: row;
+        align-items: center;
         font-size: 5rem;
         width: 100%;
-        /* gap: 20rem; */
+        gap: 20rem;
         margin-bottom: 6.7rem;
     }
 
@@ -996,11 +994,11 @@ details[open].details{
         font-weight: 400;
     }
 
-    /* #fourth .line {
+    #fourth .line {
         position: absolute;
         width: 100%;
         margin-left: 55rem;
-    } */
+    }
 
     /* FIFTH */
 
