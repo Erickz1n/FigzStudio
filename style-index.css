@@ -995,7 +995,7 @@ details[open].details{
     }
 
     #fourth .line {
-        position: absolute;
+        /* position: absolute; */
         width: 100%;
         /* margin-left: 55rem; */
     }
