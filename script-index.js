@@ -1,5 +1,6 @@
 /* MENU ATIVO */
 
+
 const scrollReveal = ScrollReveal({
     origin: 'top',
     distance: '40px',
@@ -7,7 +8,7 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-    `#header, #first .title, #first img, #second img, #second .subtitle, #third .title, #third .subtitle, #third .reference, #third img, #fourth .subtitle, #fourth .title, #fourth p, #fourth .line, #fourth a, #fifth summary, #sixth .words, #footer .footer-text, #footer li`,
+    `#header, #first .title, #first img, #second img, #second .subtitle, #third .title, #third .subtitle, #third .reference, #third img, #fourth .subtitle, #fourth .title, #fourth p, #fourth .line, #fourth a, #fifth details, #fifth summary, #sixth .words, #footer .footer-text, #footer li`,
     { interval: 100}
     )
 
@@ -205,6 +206,8 @@ for (const link of links) {
             pt: {
             header_contact_index: "CONTATO",
             portfolio_index: "PORTFÓLIO",
+            portuguese_index: "PORTUGUÊS",
+            english_index: "INGLÊS",
             text_first: "Olá, eu dou vida a histórias através de marcas excepcionais.",
             text_second: "Muito prazer!",
             subtitle_second: "Por trás de todos esses projetos, existe eu, Figz, com mais de 6 anos de experiência e especialidade em logos e identidades visuais, desenvolvemos projetos completos e soluções como design, ilustração, redação, grafismos e criação de sites.",
@@ -258,6 +261,8 @@ for (const link of links) {
             en: {
             header_contact_index: "CONTACT",
             portfolio_index: "PORTFOLIO",
+            portuguese_index: "PORTUGUESE",
+            english_index: "ENGLISH",
             text_first: "Hello, I bring stories to life through exceptional brands.",
             text_second: "Great pleasure!",
             subtitle_second: "Behind all these projects, there is me, Figz, with more than 6 years of experience and expertise in logos and visual identities, we develop complete projects and solutions such as design, illustration, writing, graphics and website creation.",
@@ -317,6 +322,8 @@ for (const link of links) {
         // HEADER
         document.getElementById('header_contact_index').style.opacity = 0;
         document.getElementById('portfolio_index').style.opacity = 0;
+        document.getElementById('portuguese_index').style.opacity = 0;
+        document.getElementById('english_index').style.opacity = 0;
         document.getElementById('home').style.opacity = 0;
         document.getElementById('logo').style.opacity = 0;
         document.getElementById('switch').style.opacity = 0;
@@ -422,6 +429,8 @@ for (const link of links) {
             document.getElementById('identity-slide').textContent = translations[lang].identity_slide;
             document.getElementById('packaging-slide').textContent = translations[lang].packaging_slide;
             document.getElementById('web-slide').textContent = translations[lang].web_slide;
+            document.getElementById('portuguese_index').textContent = translations[lang].portuguese_index;
+            document.getElementById('english_index').textContent = translations[lang].english_index;
 
 
 
@@ -431,6 +440,8 @@ for (const link of links) {
         // Fazer o fade in dos elementos
         document.getElementById('header_contact_index').style.opacity = 1;
         document.getElementById('portfolio_index').style.opacity = 1;
+        document.getElementById('portuguese_index').style.opacity = 1;
+        document.getElementById('english_index').style.opacity = 1;
         document.getElementById('home').style.opacity = 1;
         document.getElementById('logo').style.opacity = 1;
         document.getElementById('switch').style.opacity = 1;

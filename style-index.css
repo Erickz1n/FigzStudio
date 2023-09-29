@@ -546,14 +546,26 @@ summary::before {
     content: '+';
     margin-right: 1rem;
     color: var(--base-color);
-    transition: all .3s;
+    transition: all 1s;
 
 }
 
 details[open] summary:before {
     content: "-";
-    transition: all .3s;
+    transition: all 1s;
 }
+
+details.details {
+    transition: all 1s ease-in-out;
+    max-height: 10rem;
+    overflow: hidden;
+}
+
+details[open].details{
+    max-height: 20rem;
+    overflow: hidden;
+}
+
 
 /* SIXTH */
 
@@ -620,9 +632,10 @@ details[open] summary:before {
 
 .language-selector {
     position: relative;
-    display: inline-block;
+    display: flex;
     align-items: center;
     width: auto;
+
 }
 
 #language-select {
@@ -634,11 +647,19 @@ details[open] summary:before {
     width: auto;
     cursor: pointer;
     font-family: gilroy, sans-serif;
+    transition: all .3s;
+
 }
 
 #language-select:focus {
     outline: none;
 }
+
+#language-select option {
+    font-size: 1.5rem;
+}
+
+
 
 /* SWITCH */
 #switch {
@@ -779,7 +800,7 @@ details[open] summary:before {
     }
 
     .container {
-        max-width: 100%;
+        max-width: 1100px;
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -869,12 +890,9 @@ details[open] summary:before {
         margin-top: 3rem;
     }
 
-    #first .title {
-        font-size: 4rem;
-    }
 
     #first img {
-        width: 40rem;
+        width: 100%;
     }
 
     /* SECOND */
@@ -888,19 +906,13 @@ details[open] summary:before {
     }
 
     #second img {
-        width: 40rem;
+        width: 100%;
+
 
     }
 
-    #second .client-projects {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
 
-    #second .subtitle {
-        font-size: 2rem;
-    }
+
 
     /* THIRD */
 
@@ -914,30 +926,14 @@ details[open] summary:before {
     }
 
     #third img {
-        width: 40rem;
+        width: 100%;
+
     }
 
-    #third .text {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
 
-    #third .text h1 {
-        font-size: 4rem;
-        font-family: gilroy-bold, 'sans-serif';
-    }
 
-    #third .text h2 {
-        font-size: 1.5rem;
-        font-weight: 400;
-        width: 53rem;
-    }
 
-    #third .text p {
-        font-size: 1rem;
-        font-weight: 400;
-    }
+
 
     /* FOURTH */
 
@@ -1318,6 +1314,8 @@ details[open] summary:before {
         margin-left: 4.2rem;
     }
 
+
+
     /* SIXTH */
 
 
@@ -1327,6 +1325,7 @@ details[open] summary:before {
         justify-content: center;
     }
 
+    
     #sixth .word {
         font-size: 5rem;
     }
