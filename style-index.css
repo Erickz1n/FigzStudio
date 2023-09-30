@@ -495,8 +495,6 @@ nav.show div.icon-close {
 
 }
 
-
-
 /* FIFTH */
 
 #fifth {
@@ -535,7 +533,7 @@ nav.show div.icon-close {
     flex-direction: column;
     transition: all .5s;
     width: 100%;
-    font-size: clamp(3rem, 3vw, 5rem);
+    /* font-size: clamp(3rem, 3vw, 5rem); */
 
     cursor: pointer;
     color: var(--base-color);
@@ -565,12 +563,12 @@ details[open] summary:before {
 
 details.details {
     transition: all 1s ease-in-out;
-    max-height: 20rem;
+    max-height: 10rem;
     overflow: hidden;
 }
 
 details[open].details{
-    max-height: 40rem;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -809,7 +807,9 @@ details[open].details{
         overflow-x: hidden;
     }
 
-
+.world-icon {
+    width: 1.5rem;
+}
 
     .container {
         max-width: 100%;
@@ -854,7 +854,7 @@ details[open].details{
     header .logo {
         width: 20rem;
         transition: all 1s;
-        margin-right: 2rem;
+        margin-right: 5rem;
         margin-left: 1rem;
     }
 
@@ -862,13 +862,14 @@ details[open].details{
         height: 8rem;
         align-items: center;
     }
+    
 
     #header nav .menu ul li .nav {
         font-size: 1.5rem;
     }
     #header nav ul{
         align-items: center;
-        gap: 5.3rem
+        gap: 5rem
     }
 
     #header button {
@@ -897,7 +898,7 @@ details[open].details{
     }
 
     #first .title {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     #first img {
@@ -1020,7 +1021,51 @@ details[open].details{
         font-size: 2rem;
         margin-left: 4.2rem;
     }
-
+    #fifth details {
+        font-size: clamp(1.5rem, 1vw, 2rem);
+    
+        display: flex;
+        flex-direction: column;
+        transition: all .5s;
+        width: 100%;
+        font-size: clamp(3rem, 3vw, 5rem);
+    
+        cursor: pointer;
+        color: var(--base-color);
+        transition: all .3s;
+    }
+    
+    #fifth summary {
+        color: var(--base-color);
+    }
+    
+    details>summary {
+        list-style: none;
+    }
+    
+    summary::before {
+        content: '+';
+        margin-right: 1rem;
+        color: var(--base-color);
+        transition: all 1s;
+    
+    }
+    
+    details[open] summary:before {
+        content: "-";
+        transition: all 1s;
+    }
+    
+    details.details {
+        transition: all 1s ease-in-out;
+        max-height: 10rem;
+        overflow: hidden;
+    }
+    
+    details[open].details{
+        max-height: 100rem;
+        overflow: hidden;
+    }
 
 
     /* SIXTH */
@@ -1155,6 +1200,8 @@ details[open].details{
         margin-left: auto;
         margin-right: auto;
     }
+
+    
 
     .section {
         padding: 10rem 0;
