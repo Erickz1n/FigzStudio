@@ -300,7 +300,8 @@ nav.show div.icon-close {
 }
 
 #language-select option {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+
 
     color: var(--background-color);
     background-color: var(--base-color);
@@ -406,7 +407,8 @@ nav.show div.icon-close {
 }
 
 #second .subtitle {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+
 }
 
 
@@ -425,7 +427,8 @@ nav.show div.icon-close {
 }
 
 #third h1 {
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw, 5rem);
+
 }
 
 /* FOURTH  */
@@ -437,7 +440,8 @@ nav.show div.icon-close {
 }
 
 #fourth .title{
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw, 5rem);
+
     font-family: gilroy-bold;
     font-weight: bold;
     color: #ffffff;
@@ -459,7 +463,8 @@ nav.show div.icon-close {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+
     color: #ffffff;
 }
 
@@ -504,7 +509,8 @@ nav.show div.icon-close {
 }
 
 #fifth .title {
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw, 5rem);
+
     color: var(--base-color);
     transition: all .3s;
 }
@@ -523,12 +529,14 @@ nav.show div.icon-close {
 }
 
 #fifth details {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+
     display: flex;
     flex-direction: column;
     transition: all .5s;
     width: 100%;
-    gap: 3rem;
+    font-size: clamp(3rem, 3vw, 5rem);
+
     cursor: pointer;
     color: var(--base-color);
     transition: all .3s;
@@ -557,12 +565,12 @@ details[open] summary:before {
 
 details.details {
     transition: all 1s ease-in-out;
-    max-height: 10rem;
+    max-height: 20rem;
     overflow: hidden;
 }
 
 details[open].details{
-    max-height: 20rem;
+    max-height: 40rem;
     overflow: hidden;
 }
 
@@ -593,7 +601,8 @@ details[open].details{
 }
 
 .words-slide p {
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw, 5rem);
+
     margin: 0 4rem;
 }
 
@@ -640,7 +649,8 @@ details[open].details{
 
 #language-select {
     padding: .5rem;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+
     background-color: none;
     color: var(--base-color);
     border: none;
@@ -656,7 +666,8 @@ details[open].details{
 }
 
 #language-select option {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1vw, 2rem);
+
 }
 
 
@@ -792,29 +803,22 @@ details[open].details{
 }
 
 @media (min-width: 767px) {
-
     html {
         scroll-behavior: smooth;
         transition: all .3s;
         overflow-x: hidden;
     }
 
+
+
     .container {
         max-width: 100%;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .section {
         padding: 10rem 0;
-    }
-    
-    #main {
-        width: 100%;
-    }
-    
-    .section {
-        padding: calc(5rem + var(--header-height)) 0;
     }
 
     .button {
@@ -850,6 +854,8 @@ details[open].details{
     header .logo {
         width: 20rem;
         transition: all 1s;
+        margin-right: 2rem;
+        margin-left: 1rem;
     }
 
     #header {
@@ -879,8 +885,8 @@ details[open].details{
         width: 1.8rem;
     }
 
-    /* FIRST */
 
+    
     #first .first-content {
         display: grid;
         grid-template-areas: 
@@ -891,14 +897,13 @@ details[open].details{
     }
 
     #first .title {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     #first img {
         width: 100%;
     }
 
-    /* SECOND */
 
     #second .second-content {
         display: grid;
@@ -910,7 +915,6 @@ details[open].details{
 
     #second img {
         width: 100%;
-
     }
 
     #second .client-projects {
@@ -923,7 +927,8 @@ details[open].details{
         font-size: 2rem;
     }
 
-    /* THIRD */
+
+
 
     #third .third-content {
         display: grid;
@@ -931,7 +936,7 @@ details[open].details{
         'A B';
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 5rem;
     }
 
     #third img {
@@ -945,22 +950,24 @@ details[open].details{
     }
 
     #third .text h1 {
-        font-size: 4rem;
+        font-size: 5rem;
+
         font-family: gilroy-bold, 'sans-serif';
     }
 
     #third .text h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 400;
         width: 53rem;
+
     }
 
     #third .text p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 400;
+
     }
 
-    /* FOURTH */
 
     .construction {
         display: grid;
@@ -970,7 +977,6 @@ details[open].details{
         font-size: 2rem;
     }
 
-    
     
     #fourth .title-line {
         display: flex;
@@ -1001,7 +1007,10 @@ details[open].details{
         /* margin-left: 55rem; */
     }
 
-    /* FIFTH */
+
+
+
+
 
     #fifth .title {
         font-size: 5rem;
@@ -1012,6 +1021,8 @@ details[open].details{
         margin-left: 4.2rem;
     }
 
+
+
     /* SIXTH */
 
 
@@ -1021,16 +1032,23 @@ details[open].details{
         justify-content: center;
     }
 
+    #sixth .words-slide {
+        /* margin: 0 2rem; */
+        /* width: 100%; */
+
+    }
+
+    
     #sixth .word {
         font-size: 5rem;
     }
 
-    /* FOOTER */
+    
 
     #footer {
         display: flex;
         flex-direction: row;
-        gap: 48rem;
+        gap: 30rem;
         align-items: center;
     }
 
@@ -1046,6 +1064,7 @@ details[open].details{
         display: flex;
         align-items: center;
         width: auto;
+
     }
 
     #language-select {
@@ -1058,6 +1077,7 @@ details[open].details{
         cursor: pointer;
         font-family: gilroy, sans-serif;
         transition: all .3s;
+
     }
     
     #language-select:focus {
@@ -1084,6 +1104,7 @@ details[open].details{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 2rem;
 
         background:   var(--switch-bg-url) no-repeat center;
     
@@ -1123,8 +1144,10 @@ details[open].details{
         backdrop-filter: blur(0.4rem);
         -webkit-backdrop-filter: blur(0.4rem);
     }
-    
 }
+
+
+
 
 @media (min-width: 1200px) {
     .container {
