@@ -517,7 +517,6 @@ nav.show div.icon-close {
     color: var(--base-color);
     margin-left: 2.6rem;
     transition: all .3s;
-
 }
 
 #fifth h1 {
@@ -533,7 +532,6 @@ nav.show div.icon-close {
     flex-direction: column;
     transition: all .5s;
     width: 100%;
-    /* font-size: clamp(3rem, 3vw, 5rem); */
 
     cursor: pointer;
     color: var(--base-color);
@@ -915,7 +913,7 @@ details[open].details{
     }
 
     #second img {
-        width: 100%;
+        width: 30rem;
     }
 
     #second .client-projects {
@@ -925,7 +923,7 @@ details[open].details{
     }
 
     #second .subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
 
@@ -951,15 +949,15 @@ details[open].details{
     }
 
     #third .text h1 {
-        font-size: 5rem;
+        font-size: 3rem;
 
         font-family: gilroy-bold, 'sans-serif';
     }
 
     #third .text h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 400;
-        width: 53rem;
+        width: 40rem;
 
     }
 
@@ -975,7 +973,7 @@ details[open].details{
         grid-template-areas: 
         "A B";
         gap: 5.8rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     
@@ -990,15 +988,15 @@ details[open].details{
     }
 
     #fourth .title {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     #fourth h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #fourth p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 400;
     }
 
@@ -1014,11 +1012,11 @@ details[open].details{
 
 
     #fifth .title {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     #fifth .paragraph {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: 4.2rem;
     }
     #fifth details {
@@ -1085,7 +1083,7 @@ details[open].details{
 
     
     #sixth .word {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     
@@ -1189,10 +1187,11 @@ details[open].details{
         backdrop-filter: blur(0.4rem);
         -webkit-backdrop-filter: blur(0.4rem);
     }
+    
+    .icon-menu, .icon-close {
+        display: none;
+    }
 }
-
-
-
 
 @media (min-width: 1200px) {
     .container {
@@ -1201,7 +1200,9 @@ details[open].details{
         margin-right: auto;
     }
 
-    
+    .icon-menu, .icon-close {
+        display: none;
+    }
 
     .section {
         padding: 10rem 0;
