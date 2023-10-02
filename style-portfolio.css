@@ -337,283 +337,48 @@ nav.show div.icon-close {
 
 /* FIRST  */
 
-#first, #second, #third, #fourth{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-#first, #second, #third, #fourth, #fifth, #sixth{
-    transition: all .3s;
-
-}
-
-.first-content, .second-content, .third-content, .fourth-content, .fifth-content {
-    display: flex;
-    flex-direction: column;
+.portfolio-content {
+    display: grid;
+    /* flex-direction: row; */
+    grid-template-areas: "A";
     gap: 3rem;
-    margin: 0 4rem;
 }
 
-/* .square-img {
+.portfolio-content img {
     width: 100%;
-    height: auto;
-    background-color: #3e3e3e;
-} */
+    /* height: 40rem; */
+    object-fit: cover;
+    /* height: 40rem; */
 
-.client-projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    transition: transform .3s ease-in-out;
 }
 
-#first .title {
-    font-size: clamp(3rem, 3vw, 5rem);
-    font-family: gilroy-bold, sans;
-}
-
-
-#first .container, #second .container, #third .container, #fourth .container  {
+.portfolio-content div{
     width: 100%;
-    gap: 5rem;
+    overflow: hidden;
+    /* height: 40rem; */
 }
 
-.first-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+.portfolio-content img:hover {
+    transform: scale(1.1);
 }
 
-#first .texts {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* SECOND  */
-
-
-#second .second-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-}
-
-#second .client-projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-#second a {
-    font-size: clamp(1.5rem, 1vw, 2rem);
+.portfolio-content a {
     text-decoration: none;
     color: var(--base-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-
-    transition: all .4s;
-}
-
-
-/* THIRD  */
-
-#third {
-    background-color: #000;
-    color: #ffffff;
-    width: 100%;
-}
-
-#third .text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-#third h1 {
-    font-size: clamp(3rem, 3vw, 5rem);
-
-}
-
-/* FOURTH  */
-
-#fourth {
-    background-color: var(--background-fourth);
-    transition: all .3s;
-
-}
-
-#fourth .title{
-    font-size: clamp(3rem, 3vw, 5rem);
-
-    font-family: gilroy-bold;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.fourth-content {
+    /* height: 40rem; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.fourth-content .subtitle {
-    color: var(--base-color);
-    transition: all .3s;
-
-}
-
-.construction {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    font-size: clamp(1.5rem, 1vw, 2rem);
-
-    color: #ffffff;
-}
-
-.line {
-    background-color: var(--base-color);
-    height: .2rem;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    transition: all .3s;
-
-}
-
-.input .option {
-    padding: 2rem;
-    width: 2rem;
-    
-}
-
-.fourth-button {
-    width: 100%;
-    transition: all .3s;
-    
-}
-
-#fourth a {
-    transition: all .3s;
-
-}
-
-/* FIFTH */
-
-#fifth {
-    transition: all .3s;
-
-}
-
-#fifth .fifth-content {
-    display: flex;
-}
-
-#fifth .title {
-    font-size: clamp(3rem, 3vw, 5rem);
-
-    color: var(--base-color);
-    transition: all .3s;
-}
-
-#fifth p {
-    color: var(--base-color);
-    margin-left: 2.6rem;
-    transition: all .3s;
-}
-
-#fifth h1 {
-    font-family: gilroy-bold, 'sans-serif';
-    margin-bottom: 5rem;
-    transition: all .3s;
-}
-
-#fifth details {
-    font-size: clamp(1.5rem, 1vw, 2rem);
-
-    display: flex;
-    flex-direction: column;
-    transition: all .5s;
-    width: 100%;
-
-    cursor: pointer;
-    color: var(--base-color);
-    transition: all .3s;
-}
-
-#fifth summary {
-    color: var(--base-color);
-}
-
-details>summary {
-    list-style: none;
-}
-
-summary::before {
-    content: '+';
-    margin-right: 1rem;
-    color: var(--base-color);
-    transition: all 1s;
-
-}
-
-details[open] summary:before {
-    content: "-";
-    transition: all 1s;
-}
-
-details.details {
-    transition: all 1s ease-in-out;
-    max-height: 10rem;
-    overflow: hidden;
-}
-
-details[open].details{
-    max-height: 100%;
-    overflow: hidden;
+.subtitle {
+    font-size: 2rem;
 }
 
 
-/* SIXTH */
 
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%)
-    }
-    
-}
-
-.words {
-    overflow: hidden;
-    /* padding: 6rem 0; */
-    white-space: nowrap;
-    display: flex;
-}
-
-.words-slide {
-    display: flex;
-    /* gap: 4rem; */
-    animation: 5s slide infinite linear;
-}
-
-.words-slide p {
-    font-size: clamp(3rem, 3vw, 5rem);
-
-    margin: 0 4rem;
-}
-
-.sixth-content {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-}
 
 /* */
 
@@ -891,207 +656,47 @@ details[open].details{
         width: 1.8rem;
     }
 
+    #portfolio {
+        margin: 0 4rem;
+    }
 
+    .portfolio-content {
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-areas: "A B";
+        gap: 3rem;
+    }
     
-    #first .first-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        align-items: center;
-        justify-content: center;
-        margin-top: 3rem;
-    }
-
-    #first .title {
-        font-size: 3rem;
-    }
-
-    #first img {
+    .portfolio-content img {
         width: 100%;
+        /* height: 40rem; */
+        object-fit: cover;
+        height: 40rem;
+
+        transition: transform .3s ease-in-out;
     }
 
-
-    #second .second-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        justify-content: center;
-        align-items: center;
+    .portfolio-content div{
+        width: 100%;
+        overflow: hidden;
+        height: 40rem;
     }
 
-    #second img {
-        width: 30rem;
+    .portfolio-content img:hover {
+        transform: scale(1.1);
     }
 
-    #second .client-projects {
+    .portfolio-content a {
+        text-decoration: none;
+        color: var(--base-color);
+        /* height: 40rem; */
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    #second .subtitle {
+    .subtitle {
         font-size: 1.5rem;
-
-    }
-
-
-
-
-    #third .third-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-    }
-
-    #third img {
-        width: 100%;
-    }
-
-    #third .text {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    #third .text h1 {
-        font-size: 3rem;
-
-        font-family: gilroy-bold, 'sans-serif';
-    }
-
-    #third .text h2 {
-        font-size: 1.5rem;
-        font-weight: 400;
-        width: 40rem;
-
-    }
-
-    #third .text p {
-        font-size: 1.5rem;
-        font-weight: 400;
-
-    }
-
-
-    .construction {
-        display: grid;
-        grid-template-areas: 
-        "A B";
-        gap: 5.8rem;
-        font-size: 1.5rem;
-    }
-
-    
-    #fourth .title-line {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        font-size: 5rem;
-        /* width: 100%; */
-        /* gap: 20rem; */
-        margin-bottom: 6.7rem;
-    }
-
-    #fourth .title {
-        font-size: 3rem;
-    }
-
-    #fourth h2 {
-        font-size: 1.5rem;
-    }
-
-    #fourth p {
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
-
-    #fourth .line {
-        /* position: absolute; */
-        width: 100%;
-        /* margin-left: 55rem; */
-    }
-
-
-
-
-
-
-    #fifth .title {
-        font-size: 3rem;
-    }
-
-    #fifth .paragraph {
-        font-size: 1.5rem;
-        margin-left: 4.2rem;
-    }
-    #fifth details {
-        font-size: clamp(1.5rem, 1vw, 2rem);
-    
-        display: flex;
-        flex-direction: column;
-        transition: all .5s;
-        width: 100%;
-        font-size: clamp(3rem, 3vw, 5rem);
-    
-        cursor: pointer;
-        color: var(--base-color);
-        transition: all .3s;
-    }
-    
-    #fifth summary {
-        color: var(--base-color);
-    }
-    
-    details>summary {
-        list-style: none;
-    }
-    
-    summary::before {
-        content: '+';
-        margin-right: 1rem;
-        color: var(--base-color);
-        transition: all 1s;
-    
-    }
-    
-    details[open] summary:before {
-        content: "-";
-        transition: all 1s;
-    }
-    
-    details.details {
-        transition: all 1s ease-in-out;
-        max-height: 10rem;
-        overflow: hidden;
-    }
-    
-    details[open].details{
-        max-height: 100rem;
-        overflow: hidden;
-    }
-
-
-    /* SIXTH */
-
-
-    #sixth {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    /* #sixth .words-slide {
-        margin: 0 2rem;
-        width: 100%;
-
-    } */
-
-    
-    #sixth .word {
-        font-size: 3rem;
     }
 
     
@@ -1280,162 +885,45 @@ details[open].details{
         width: 1.8rem;
     }
 
-
-
-    /* FIRST */
-
-    #first .first-content {
+    .portfolio-content {
         display: grid;
-        grid-template-areas: 
-        'A B';
-        align-items: center;
-        justify-content: center;
-        margin-top: 3rem;
+        /* flex-direction: row; */
+        grid-template-areas: "A B";
+        gap: 3rem;
+    }
+    
+    .portfolio-content img {
+        width: 100%;
+        /* height: 40rem; */
+        object-fit: cover;
+        height: 40rem;
+
+        transition: transform .3s ease-in-out;
     }
 
-    #first .title {
-        font-size: 5rem;
+    .portfolio-content div{
+        width: 100%;
+        overflow: hidden;
+        height: 40rem;
     }
 
-    #first img {
-        width: 53.7rem;
+    .portfolio-content img:hover {
+        transform: scale(1.1);
     }
 
-    /* SECOND */
-
-    #second .second-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        justify-content: center;
-        align-items: center;
-    }
-
-    #second img {
-        width: 53.7rem;
-    }
-
-    #second .client-projects {
+    .portfolio-content a {
+        text-decoration: none;
+        color: var(--base-color);
+        /* height: 40rem; */
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    #second a {
-        font-size: 2rem;
-
-
-    }
-
-    /* THIRD */
-
-    #third .third-content {
-        display: grid;
-        grid-template-areas: 
-        'A B';
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-    }
-
-    #third img {
-        width: 53.7rem;
-    }
-
-    #third .text {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    #third .text h1 {
-        font-size: 5rem;
-
-        font-family: gilroy-bold, 'sans-serif';
-    }
-
-    #third .text h2 {
-        font-size: 2rem;
-        font-weight: 400;
-        width: 53rem;
-
-    }
-
-    #third .text p {
-        font-size: 1.5rem;
-        font-weight: 400;
-
-    }
-
-    /* FOURTH */
-
-
-    .construction {
-        display: grid;
-        grid-template-areas: 
-        "A B";
-        gap: 5.8rem;
+    .subtitle {
         font-size: 2rem;
     }
 
-    
-    #fourth .title-line {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 5rem;
-        width: 100%;
-        gap: 20rem;
-        margin-bottom: 6.7rem;
-    }
-
-    #fourth .title {
-        font-size: 5rem;
-    }
-
-    #fourth h2 {
-        font-size: 2rem;
-    }
-
-    #fourth p {
-        font-size: 2rem;
-        font-weight: 400;
-    }
-
-    #fourth .line {
-        position: absolute;
-        width: 100%;
-        margin-left: 55rem;
-    }
-    
-
-    /* FIFTH */
-
-
-    #fifth .title {
-        font-size: 5rem;
-    }
-
-    #fifth .paragraph {
-        font-size: 2rem;
-        margin-left: 4.2rem;
-    }
-
-
-
-    /* SIXTH */
-
-
-    #sixth {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    
-    #sixth .word {
-        font-size: 5rem;
-    }
 
     /* FOOTER */
 
