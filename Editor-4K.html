@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor 4K - Figz Studio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="style-projects.css">
+
+
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <div id="app-index">
+
+        <header id="header">
+            <nav class="container">
+                <!-- <div class="header-content"> -->
+
+                    <img class="logo" id="logo" src="./assets/images/logo-black.svg" alt="">
+                    <!-- menu -->
+                    <div id="switch" onclick="toggleMode()" >
+                        <button>
+                        </button>
+        
+                    </div>
+                <!-- </div> -->
+                <div class="menu">
+                    <ul class="grid">
+                        <li><a href="index.html" class="nav" id="home">HOME</a></li>
+                        <li><a href="" class="nav" id="portfolio_index">PORTFÓLIO</a></li>
+                        <li><a href="./form.html" class="nav" target="_blank" id="header_contact_index">CONTATO</a></li>
+
+                        <div class="language-selector">
+                            <img src="./assets/images/icon-world.svg" class="world-icon" alt="">
+                            <select id="language-select" onchange="changeLanguage(this.value)" onmouseover="openOptions()" onmouseout="closeOptions()">
+                                <option value="hidden" id="language_index" disable selected hidden>IDIOMA</option>
+                                <option value="pt" id="portuguese_index">PORTUGUÊS</option>
+                                <option value="en" id="english_index">INGLÊS</option>
+                            </select>
+                        </div>
+                        
+
+                    </ul>
+
+                </div>
+                <div class="toggle icon-menu"></div>
+                <div class="toggle icon-close"></div>
+            </nav>
+
+        </header>
+
+        
+        <main>
+
+            <section id="portfolio" class="section">
+                <div class="container grid">
+                    <div class="project-content">
+                        <div class="video" id="video">
+                            <video src="./assets/images/projects/Editor-4K/video-editor4k.mp4" autoplay muted>
+                                <source src="">
+                            </video>
+                        </div>
+
+                        <div class="text-project" id="text-project">
+                            <p class="subtitle" id="subtitle">
+                                Um tanto de sombra, um tanto de criatividade, um tanto de edição.
+                                Esse é um projeto que demonstra o poder de uma boa construção visual em um infoproduto. O curso Editor4K é para profissionais que desejam iniciar sua carreira como editor de vídeo de uma forma mais sofisticada e simples, para conseguir seus primeiros dígitos de  faturamento em um curto período de tempo. Buscando uma transformação empresarial que mudasse a realidade de suas vidas. 
+                            </p>
+
+                            <div class="follow">
+                                <p class="subtitle" id="follow-me">
+                                    Me siga: <a href="https://www.instagram.com/figzneto/" class="instagram" target="_blank">@figzneto </a>
+                                </p>
+                            </div>
+
+                            <h2 class="project-informations">
+                                Cliente: Editor4K    |    Serviço: Identidade Visual    |    Ano: 2023    |    Diretor Estratégico: Figz    |    Motion: Fernando Madruga    |  ​​​​​​​Responsável: Figz Studio
+                            </h2>
+                        </div>
+
+                        <div class="image-projects">
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/02.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/03.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/04.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/05.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/06.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/07.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/08.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/09.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/10.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/11.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/12.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/13.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/14.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/15.jpg" alt="">
+                            </div>
+                            <div class="images" id="images">
+                                <img src="./assets/images/projects/Editor-4K/16.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="buttons" id="buttons">
+                            <ul><li><a href="" class="back">Bobcoin </a> </li></ul>
+                            <ul><li><a href="" class="next">Bobcoin </a> <img class="next-arrow" id="next-arrow" src="./assets/images/right-arrow-white.svg" alt="">  </li></ul>
+                        </div>
+
+                    </div>
+                    
+            
+                </div>
+            </section>
+
+
+
+
+        </main>
+
+    
+        <footer id="footer" class="section">
+            <div class="footer-text">
+                <p class="text" id="footer_title">Aguardo seu contato!</p>
+                <p class="text" id="footer_subtitle">Solicite um orçamento via email: contato@figzstudio.com</p>
+            </div>
+            <ul>
+                <li class="footer">
+                    <a class="link" id="behance" target="_blank" href="https://www.behance.net/figueiredonetodesign">Behance</a>
+                </li>
+                <li class="footer">
+                    <a class="link"  id="instagram" target="_blank" href="https://www.instagram.com/figzneto/">Instagram</a>
+                </li>
+            </ul>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        
+        <a href="#video" class="back-to-top"><i class="icon-arrow-up"></i></a>
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="script-editor4k.js"></script>
+    </div>
+
+</body>
+</html>

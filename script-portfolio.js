@@ -165,8 +165,8 @@ for (const link of links) {
             portuguese_index: "PORTUGUÊS",
             english_index: "INGLÊS",
 
-
-
+            footer_title: "Aguardo seu contato!",
+            footer_subtitle: "Solicite um orçamento via email: contato@figzstudio.com",
 
             },
             en: {
@@ -175,7 +175,8 @@ for (const link of links) {
             portuguese_index: "PORTUGUESE",
             english_index: "ENGLISH",
 
-
+            footer_title: "Waiting for your contact!",
+            footer_subtitle: "Request a quote via email: contato@figzstudio.com",
             }
 
             
@@ -191,6 +192,11 @@ for (const link of links) {
         document.getElementById('home').style.opacity = 0;
         document.getElementById('logo').style.opacity = 0;
         document.getElementById('switch').style.opacity = 0;
+        document.getElementById('footer_title').style.opacity = 0;
+        document.getElementById('footer_subtitle').style.opacity = 0;
+        document.getElementById('behance').style.opacity = 0;
+        document.getElementById('instagram').style.opacity = 0;
+    
 
         // SECTIONS
 
@@ -205,7 +211,8 @@ for (const link of links) {
             document.getElementById('portfolio_index').textContent = translations[lang].portfolio_index;
             document.getElementById('portuguese_index').textContent = translations[lang].portuguese_index;
             document.getElementById('english_index').textContent = translations[lang].english_index;
-
+            document.getElementById('footer_title').textContent = translations[lang].footer_title;
+            document.getElementById('footer_subtitle').textContent = translations[lang].footer_subtitle;
 
 
 
@@ -219,6 +226,11 @@ for (const link of links) {
         document.getElementById('home').style.opacity = 1;
         document.getElementById('logo').style.opacity = 1;
         document.getElementById('switch').style.opacity = 1;
+        document.getElementById('footer_title').style.opacity = 1;
+        document.getElementById('footer_subtitle').style.opacity = 1;
+        document.getElementById('behance').style.opacity = 1;
+        document.getElementById('instagram').style.opacity = 1;
+    
 
         // SECTIONS
 

@@ -349,6 +349,11 @@ nav.show div.icon-close {
 
 }
 
+#first img {
+    border-radius: 3rem;
+
+}
+
 .first-content, .second-content, .third-content, .fourth-content, .fifth-content {
     display: flex;
     flex-direction: column;
@@ -393,7 +398,6 @@ nav.show div.icon-close {
 
 /* SECOND  */
 
-
 #second .second-content {
     display: flex;
     flex-direction: column;
@@ -404,6 +408,11 @@ nav.show div.icon-close {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+#second img {
+    border-radius: 3rem;
+
 }
 
 #second a {
@@ -425,6 +434,11 @@ nav.show div.icon-close {
     background-color: #000;
     color: #ffffff;
     width: 100%;
+}
+
+#third img {
+    border-radius: 3rem;
+
 }
 
 #third .text {
