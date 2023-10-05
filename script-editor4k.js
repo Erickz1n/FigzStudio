@@ -164,6 +164,8 @@ for (const link of links) {
 
             subtitle: "Um tanto de sombra, um tanto de criatividade, um tanto de edição. Esse é um projeto que demonstra o poder de uma boa construção visual em um infoproduto. O curso Editor4K é para profissionais que desejam iniciar sua carreira como editor de vídeo de uma forma mais sofisticada e simples, para conseguir seus primeiros dígitos de faturamento em um curto período de tempo. Buscando uma transformação empresarial que mudasse a realidade de suas vidas.",
             follow_me: "Me siga:",
+            project_info: "Cliente: Editor4K    |    Serviço: Identidade Visual    |    Ano: 2023    |    Diretor Estratégico: Figz    |    Motion: Fernando Madruga    |  ​​​​​​​Responsável: Figz Studio",
+
 
             footer_title: "Aguardo seu contato!",
             footer_subtitle: "Solicite um orçamento via email: contato@figzstudio.com",
@@ -177,6 +179,7 @@ for (const link of links) {
             
             subtitle: "A bit of shading, a bit of creativity, a bit of editing. This is a project that demonstrates the power of a good visual construction in an infoproduct. The Editor4K course is for professionals who want to start their career as a video editor in a more sophisticated and simple way, in order to achieve their first revenue figures in a short period of time. Seeking a business transformation that would change the reality of their lives.",
             follow_me: "Follow me:",
+            project_info: "Client: Editor4K    |    Service: Visual Identity    |    Year: 2023    |    Strategic Director: Figz    |    Motion: Fernando Madruga    |  ​​​​​​​Responsible: Figz Studio",
 
             footer_title: "Waiting for your contact!",
             footer_subtitle: "Request a quote via email: contato@figzstudio.com",
@@ -197,6 +200,8 @@ for (const link of links) {
         document.getElementById('switch').style.opacity = 0;
         document.getElementById('subtitle').style.opacity = 0;
         document.getElementById('follow-me').style.opacity = 0;
+        document.getElementById('project-informations').style.opacity = 0;
+        document.getElementById('instagramfigz').style.opacity = 0;
         document.getElementById('footer_title').style.opacity = 0;
         document.getElementById('footer_subtitle').style.opacity = 0;
         document.getElementById('behance').style.opacity = 0;
@@ -220,6 +225,7 @@ for (const link of links) {
             document.getElementById('footer_subtitle').textContent = translations[lang].footer_subtitle;
             document.getElementById('subtitle').textContent = translations[lang].subtitle;
             document.getElementById('follow-me').textContent = translations[lang].follow_me;
+            document.getElementById('project-informations').textContent = translations[lang].project_info;
 
 
 
@@ -233,6 +239,9 @@ for (const link of links) {
         document.getElementById('home').style.opacity = 1;
         document.getElementById('logo').style.opacity = 1;
         document.getElementById('switch').style.opacity = 1;
+        document.getElementById('instagramfigz').style.opacity = 1;
+        document.getElementById('project-informations').style.opacity = 1;
+
         document.getElementById('footer_title').style.opacity = 1;
         document.getElementById('footer_subtitle').style.opacity = 1;
         document.getElementById('behance').style.opacity = 1;

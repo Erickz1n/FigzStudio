@@ -350,6 +350,7 @@ nav.show div.icon-close {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    margin: 10rem 0;
 }
 
 .project-informations {
@@ -379,7 +380,7 @@ video {
 }
 
 .subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .image-projects {
@@ -392,6 +393,16 @@ video {
     width: 100%;
 }
 
+.follow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.follow a {
+    font-size: 1.5rem;
+}
 
 .buttons ul li {
     display: flex;
@@ -437,14 +448,21 @@ video {
 .next, .back {
     display: flex;
     justify-content: end;
-    font-size: 4rem;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--base-color);
 }
 
+.next:hover {
+    margin-right: -.5rem;
+}
+
 .next-arrow, .back-arrow {
-    width: 4rem;
+    display: flex;
+    width: 2rem;
     margin-top: .5rem ;
+    transition: all .2s;
+
 }
 
 .back {
@@ -923,6 +941,131 @@ video {
     #header button .arrow {
         width: 1.8rem;
     }
+
+    
+.project-content {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: row; */
+    gap: 3rem;
+}
+
+.text-project {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.project-informations {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    /* margin-top: 3rem; */
+}
+
+.instagram {
+    text-decoration: none;
+    color: var(--base-color);
+    transition: all .3s ease-in-out;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+
+.follow a {
+    font-size: 2rem;
+}
+
+.image-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image-projects .images img {
+    width: 100%;
+}
+
+
+.buttons ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.buttons {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons a {
+    text-decoration: none;
+
+    transition: .2s;
+    position: relative;
+}
+
+.buttons a:hover {
+    color: var(--base-color);
+}
+
+.buttons a::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: var(--base-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    transition: width .2s ease-in-out;
+}
+
+.buttons a:hover::after {
+    width: 100%;
+}
+
+
+.next, .back {
+    display: flex;
+    justify-content: end;
+    font-size: 4rem;
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+.next-arrow, .back-arrow {
+    width: 4rem;
+    margin-top: .5rem ;
+}
+
+.back {
+    display: none;
+}
+
 
     .subtitle {
         font-size: 2rem;
