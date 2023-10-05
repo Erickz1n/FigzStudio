@@ -123,6 +123,7 @@ for (const link of links) {
         const img = document.querySelector("#header img")
         const worldIcon = document.querySelector(".language-selector img")
         const nextArrow = document.querySelector("#next-arrow")
+        const backArrow = document.querySelector("#back-arrow")
         //substituir a imagem
 
         if(html.classList.contains('dark')) {
@@ -134,7 +135,10 @@ for (const link of links) {
             worldIcon.setAttribute('alt', 'icone de mundo')
             
             nextArrow.setAttribute('src', './assets/images/right-arrow-white.svg')
-            nextArrow.setAttribute('alt', 'Seta para prosseguir para o próximo projeto')
+            nextArrow.setAttribute('alt', 'Seta branca para prosseguir para o próximo projeto')
+
+            backArrow.setAttribute('src', './assets/images/left-arrow-white.svg')
+            backArrow.setAttribute('alt', 'Seta branca para prosseguir para o projeto anterior')
         } else {
             //se tiver sem light mode, manter a imagem normal
             img.setAttribute('src', './assets/images/logo-black.svg')
@@ -145,6 +149,9 @@ for (const link of links) {
 
             nextArrow.setAttribute('src', './assets/images/right-arrow-black.svg')
             nextArrow.setAttribute('alt', 'Seta preta para prosseguir para o próximo projeto')
+
+            backArrow.setAttribute('src', './assets/images/left-arrow-black.svg')
+            backArrow.setAttribute('alt', 'Seta preta para prosseguir para o projeto anterior')
 
         }
     }
@@ -166,6 +173,8 @@ for (const link of links) {
             follow_me: "Me siga:",
             project_info: "Cliente: Editor4K    |    Serviço: Identidade Visual    |    Ano: 2023    |    Diretor Estratégico: Figz    |    Motion: Fernando Madruga    |  ​​​​​​​Responsável: Figz Studio",
 
+            subtitle_bobcoin: 'Conectando você ao mundo das criptomoedas com tecnologia e intuição. Uma tipografia futurística e elegante foi a melhor escolha para a construção da marca e identidade visual do projeto, onde a letra "b" pode ser utilizada como ícone em reduções ou grafismos. O Bobcoin é mais que um exchange, somos uma plataforma digital que oferece a compra, a venda e a troca de criptoativos. Mas, além disso, somos a primeira empresa digital que oferece formações 100% gratuitas na área. Você vai poder estudar, onde estiver e aprender a como investir em criptoativos, então você vai poder investir seu próprio dinheiro ou quem sabe até descobrir uma nova profissão no mercado financeiro.',
+
 
             footer_title: "Aguardo seu contato!",
             footer_subtitle: "Solicite um orçamento via email: contato@figzstudio.com",
@@ -180,6 +189,9 @@ for (const link of links) {
             subtitle: "A bit of shading, a bit of creativity, a bit of editing. This is a project that demonstrates the power of a good visual construction in an infoproduct. The Editor4K course is for professionals who want to start their career as a video editor in a more sophisticated and simple way, in order to achieve their first revenue figures in a short period of time. Seeking a business transformation that would change the reality of their lives.",
             follow_me: "Follow me:",
             project_info: "Client: Editor4K    |    Service: Visual Identity    |    Year: 2023    |    Strategic Director: Figz    |    Motion: Fernando Madruga    |  ​​​​​​​Responsible: Figz Studio",
+
+
+            subtitle_bobcoin: 'Connecting you to the world of cryptocurrencies with technology and intuition.A futuristic and elegant typography was the best choice for building the brand and visual identity of the project, where the letter "b" can be used as an icon in reductions or graphics. Bobcoin is more than an exchange, we are a digital platform that offers the purchase, sale and exchange of crypto assets. But, in addition, we are the first digital company that offers 100% free training in the area. You will be able to study wherever you are and learn how to invest in crypto assets, so you will be able to invest your own money or maybe even discover a new profession in the financial market.',
 
             footer_title: "Waiting for your contact!",
             footer_subtitle: "Request a quote via email: contato@figzstudio.com",
