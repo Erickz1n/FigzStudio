@@ -460,7 +460,7 @@ video {
 
 .next-arrow, .back-arrow {
     display: flex;
-    width: 2rem;
+    width: 1.5rem;
     /* margin-top: .5rem ; */
     transition: all .2s;
 
