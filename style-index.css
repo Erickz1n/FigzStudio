@@ -922,6 +922,8 @@ details[open].details{
 
     #first img {
         width: 100%;
+    border-radius: 3rem;
+
     }
 
 
@@ -935,6 +937,8 @@ details[open].details{
 
     #second img {
         width: 30rem;
+    border-radius: 3rem;
+
     }
 
     #second .client-projects {
@@ -962,6 +966,8 @@ details[open].details{
 
     #third img {
         width: 100%;
+    border-radius: 3rem;
+
     }
 
     #third .text {
@@ -1313,6 +1319,8 @@ details[open].details{
 
     #first img {
         width: 53.7rem;
+    border-radius: 3rem;
+
     }
 
     /* SECOND */
@@ -1327,6 +1335,8 @@ details[open].details{
 
     #second img {
         width: 53.7rem;
+    border-radius: 3rem;
+
     }
 
     #second .client-projects {
@@ -1354,6 +1364,8 @@ details[open].details{
 
     #third img {
         width: 53.7rem;
+    border-radius: 3rem;
+
     }
 
     #third .text {
